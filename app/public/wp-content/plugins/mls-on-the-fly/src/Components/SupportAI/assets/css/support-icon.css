@@ -1,0 +1,29 @@
+.support-float-icon {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    background-color: #8d42f7;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-decoration: none;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    z-index: 999999;
+}
+
+.support-float-icon:hover {
+    background-color: #8138e7;
+    transform: scale(1.1);
+    color: white;
+    text-decoration: none;
+}
+
+.support-float-icon svg {
+    width: 24px;
+    height: 24px;
+} 

@@ -1,0 +1,101 @@
+/*
+Theme Name: Houzez Child
+Theme URI: http://www.favethemes.com/
+Author: Favethemes
+Author URI: http://www.favethemes.com/
+Description: Houzez is a premium WordPress theme for real estate agents where modern aesthetics are combined with tasteful simplicity, and where the ease of use is achieved without compromise in your ability to customise the design. Whether you are a real estate agent looking to build a website for your company or a web developer seeking a perfect WordPress theme for your next project, you are certain to appreciate the numerous features and benefits that our theme provides.
+Version: 1.0
+Tags: white, right-sidebar, left-sidebar, custom-colors, custom-menu, featured-images, post-formats, theme-options, translation-ready
+License: GNU General Public License version 3.0
+License URI: http://www.gnu.org/licenses/gpl-3.0.html
+Text Domain: houzez
+Template: houzez
+*/
+
+
+@import url("../houzez/style.css");
+
+/* Your CSS code goes here
+-------------------------------------- */
+
+.property-lightbox .modal-header {
+    background-color: #f081229e;
+    color: #252627;
+}
+
+.header-mobile {
+    /* background-color: #004274; */
+    background: transparent !important;
+}
+
+.header-mobile .toggle-button-left, .header-mobile .toggle-button-right {
+    color: #fcfcfc;
+}
+.pp-white-text {
+    
+    color: #fff !important;
+    
+}
+
+.block-title-wrap {
+ 
+    padding-bottom: 20px !important;
+}
+.lightbox-logo img {
+    max-height: 40px;
+}
+
+.gm-marker {
+    background: #f08122 !important;
+    border: 1px solid #f18122 !important;
+    -webkit-box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.2) !important;
+    box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.2) !important;
+}
+
+.gm-marker {
+    color: #ffffff !important;
+    border-radius: 30px;
+    line-height: 22px;
+    padding: 0 7px;
+    font-size: 12px;
+}
+
+.gm-marker-price:after {
+    content: "";
+    display: block;
+    background-color: rgb(0 79 159);
+    border-radius: 100%;
+    height: 4px;
+    width: 10px;
+    position: absolute;
+    left: calc(50% - 5px);
+    top: calc(100% + 5px);
+}
+.gm-marker:after {
+    border-color: rgba(255, 255, 255, 0);
+    border-top-color: #f08122 !important;
+    border-width: 7px;
+    margin-left: -7px;
+}
+
+.footer-top-wrap {
+    padding: 100px 0 2px !important;
+}
+
+
+/***
+ * 
+ * fonts adjustments
+ * **/
+
+.elementor-10 .elementor-element.elementor-element-4b2f91d .houzez_section_subtitle {
+    font-family: Futura;
+    font-size: 16px;
+    font-weight: 100;
+    line-height: 1.5em;
+    margin-bottom: 0px;
+}
+
+
+
+

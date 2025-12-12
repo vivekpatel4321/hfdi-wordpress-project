@@ -1,0 +1,77 @@
+
+---Downloaded files---
+The import files for: Houzez01 were successfully downloaded!
+Initial max execution time = 30
+Files info:
+Site URL = https://propertypoint.co.ke
+Data file = /home/mike/propertypoint.co.ke/public/wp-content/uploads/2025/01/demo-content-import-file_2025-01-31__08-47-30.xml
+Widget file = /home/mike/propertypoint.co.ke/public/wp-content/uploads/2025/01/demo-widgets-import-file_2025-01-31__08-47-30.json
+Customizer file = not defined!
+Redux files:
+houzez_options -> /home/mike/propertypoint.co.ke/public/wp-content/uploads/2025/01/demo-redux-import-file_0-2025-01-31__08-47-30.json 
+
+
+---ocdi/before_content_import---
+
+
+------
+New AJAX call!
+
+
+------
+New AJAX call!
+
+
+------
+New AJAX call!
+
+
+---Importing widgets---
+Default Sidebar : 
+
+Archives - No Title - Imported
+Categories - No Title - Imported
+Meta - No Title - Imported
+
+Property Listings : 
+
+HOUZEZ: Featured Properties - Featured Listings - Imported
+HOUZEZ: Property Taxonomies - Property Type - Imported
+HOUZEZ: Property Taxonomies - Cities - Imported
+
+Search Sidebar : 
+
+HOUZEZ: Property Taxonomies - Popular Cities - Imported
+HOUZEZ: Featured Properties - Featured - Imported
+
+Page Sidebar : 
+
+HOUZEZ: Featured Properties - Featured - Imported
+HOUZEZ: Property Taxonomies - Discover - Imported
+HOUZEZ: Latest Posts - Latest Posts - Imported
+
+Agency Sidebar : 
+
+HOUZEZ: Agency Search - Find Agency - Imported
+HOUZEZ: Featured Properties - Featured - Imported
+
+Agent Sidebar : 
+
+HOUZEZ: Agent Search - Find Agent - Imported
+HOUZEZ: Recent View Properties - Recent Viewed  - Imported
+
+Footer Area 1 : 
+
+HOUZEZ: Property Taxonomies - Discover - Imported
+
+Footer Area 2 : 
+
+HOUZEZ: Contact Us - Contact Us - Imported
+
+
+
+---Importing Redux settings---
+Redux settings import for: houzez_options finished successfully!
+
+---ocdi/after_import---
+

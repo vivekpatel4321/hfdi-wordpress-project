@@ -1,0 +1,26 @@
+[2025-12-12 04:46:46 : INFO] - Cache for URL: https://staging-propertypoint.hfgroup.co.ke/ has been purged, triggered by action: save_post 
+[2025-12-12 04:46:46 : INFO] - Cache for author page URL: https://staging-propertypoint.hfgroup.co.ke/author/mike/ associated with post_type: page and Title: "Home Default" has been purged, triggered by action: save_post 
+[2025-12-12 04:46:47 : INFO] - Cache for URL: https://staging-propertypoint.hfgroup.co.ke/ has been purged, triggered by action: save_post 
+[2025-12-12 04:46:47 : INFO] - Cache for author page URL: https://staging-propertypoint.hfgroup.co.ke/author/mike/ associated with post_type: page and Title: "Home Default" has been purged, triggered by action: save_post 
+[2025-12-12 04:46:48 : INFO] - Cache for URL: https://staging-propertypoint.hfgroup.co.ke/ has been purged, triggered by action: save_post 
+[2025-12-12 04:46:48 : INFO] - Cache for author page URL: https://staging-propertypoint.hfgroup.co.ke/author/mike/ associated with post_type: page and Title: "Home Default" has been purged, triggered by action: save_post 
+[2025-12-12 04:49:15 : INFO] - Cache for URL: https://staging-propertypoint.hfgroup.co.ke/ has been purged, triggered by action: save_post 
+[2025-12-12 04:49:15 : INFO] - Cache for author page URL: https://staging-propertypoint.hfgroup.co.ke/author/mike/ associated with post_type: page and Title: "Home Default" has been purged, triggered by action: save_post 
+[2025-12-12 04:49:16 : INFO] - Cache for URL: https://staging-propertypoint.hfgroup.co.ke/ has been purged, triggered by action: save_post 
+[2025-12-12 04:49:16 : INFO] - Cache for author page URL: https://staging-propertypoint.hfgroup.co.ke/author/mike/ associated with post_type: page and Title: "Home Default" has been purged, triggered by action: save_post 
+[2025-12-12 04:49:16 : INFO] - Cache for URL: https://staging-propertypoint.hfgroup.co.ke/ has been purged, triggered by action: save_post 
+[2025-12-12 04:49:16 : INFO] - Cache for author page URL: https://staging-propertypoint.hfgroup.co.ke/author/mike/ associated with post_type: page and Title: "Home Default" has been purged, triggered by action: save_post 
+[2025-12-12 04:58:52 : INFO] - Cache for URL: https://staging-propertypoint.hfgroup.co.ke/contact/ has been purged, triggered by action: save_post 
+[2025-12-12 04:58:52 : INFO] - Cache for author page URL: https://staging-propertypoint.hfgroup.co.ke/author/mike/ associated with post_type: page and Title: "Contact" has been purged, triggered by action: save_post 
+[2025-12-12 04:58:52 : INFO] - Cache for URL: https://staging-propertypoint.hfgroup.co.ke/contact/ has been purged, triggered by action: save_post 
+[2025-12-12 04:58:52 : INFO] - Cache for author page URL: https://staging-propertypoint.hfgroup.co.ke/author/mike/ associated with post_type: page and Title: "Contact" has been purged, triggered by action: save_post 
+[2025-12-12 04:58:52 : INFO] - Cache for URL: https://staging-propertypoint.hfgroup.co.ke/contact/ has been purged, triggered by action: save_post 
+[2025-12-12 04:58:52 : INFO] - Cache for author page URL: https://staging-propertypoint.hfgroup.co.ke/author/mike/ associated with post_type: page and Title: "Contact" has been purged, triggered by action: save_post 
+[2025-12-12 04:59:32 : INFO] - Cache for URL: https://staging-propertypoint.hfgroup.co.ke/contact/ has been purged, triggered by action: save_post 
+[2025-12-12 04:59:32 : INFO] - Cache for author page URL: https://staging-propertypoint.hfgroup.co.ke/author/mike/ associated with post_type: page and Title: "Contact" has been purged, triggered by action: save_post 
+[2025-12-12 04:59:33 : INFO] - Cache for URL: https://staging-propertypoint.hfgroup.co.ke/contact/ has been purged, triggered by action: save_post 
+[2025-12-12 04:59:33 : INFO] - Cache for author page URL: https://staging-propertypoint.hfgroup.co.ke/author/mike/ associated with post_type: page and Title: "Contact" has been purged, triggered by action: save_post 
+[2025-12-12 04:59:33 : INFO] - Cache for URL: https://staging-propertypoint.hfgroup.co.ke/contact/ has been purged, triggered by action: save_post 
+[2025-12-12 04:59:33 : INFO] - Cache for author page URL: https://staging-propertypoint.hfgroup.co.ke/author/mike/ associated with post_type: page and Title: "Contact" has been purged, triggered by action: save_post 
+[2025-12-12 06:01:52 : INFO] - Setting changed, purging cache 
+[2025-12-12 06:02:31 : INFO] - Full Cache Purge triggered by: WP_Optimize_Cache_Commands::purge_page_cache 
