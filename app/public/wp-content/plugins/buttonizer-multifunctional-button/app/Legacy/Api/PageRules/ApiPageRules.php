@@ -5,7 +5,7 @@ namespace Buttonizer\Legacy\Api\PageRules;
 use Buttonizer\Utils\PermissionCheck;
 /**
  * PageRules API
- * 
+ *
  * @endpoint /wp-json/buttonizer/page_rules
  * @methods GET POST
  */

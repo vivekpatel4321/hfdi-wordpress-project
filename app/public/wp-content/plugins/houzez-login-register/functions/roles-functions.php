@@ -113,6 +113,9 @@ if( !function_exists('houzez_add_theme_caps') ) {
             $role->add_cap('delete_others_agents');
             $role->add_cap('edit_private_agents');
             $role->add_cap('edit_published_agents');
+            
+            // Add capability to edit others' posts for CRM access
+            $role->add_cap('edit_others_posts');
         }
 
 
@@ -168,6 +171,7 @@ if( !function_exists('houzez_add_theme_caps') ) {
             // Add capability to upload files and edit posts
             $manager_role->add_cap('upload_files');
             $manager_role->add_cap('edit_posts');
+            $manager_role->add_cap('edit_others_posts');
         }
 
         $agent_role = get_role('houzez_agent');

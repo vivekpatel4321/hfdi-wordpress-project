@@ -58,7 +58,7 @@ class Database {
 	/**
 	 * Cached result of php_sapi_name() for performance.
 	 *
-	 * @since 4.9.1.1-2025-12-04-12:51
+	 * @since 4.9.1.1
 	 *
 	 * @var string|null
 	 */
@@ -1059,7 +1059,7 @@ class Database {
 	/**
 	 * Adds a WHERE LIKE clause.
 	 *
-	 * @since 4.9.1.1-2025-12-04-12:51
+	 * @since 4.9.1.1
 	 *
 	 * @param  string   $field        The column name.
 	 * @param  string   $value        The value to search for.

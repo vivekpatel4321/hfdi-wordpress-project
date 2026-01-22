@@ -1,12 +1,12 @@
 <?php
 
-/* 
+/*
  * SOFTWARE LICENSE INFORMATION
- * 
+ *
  * Copyright (c) 2017 Buttonizer, all rights reserved.
- * 
+ *
  * This file is part of Buttonizer
- * 
+ *
  * For detailed information regarding to the licensing of
  * this software, please review the license.txt or visit:
  * https://buttonizer.pro/license/
@@ -18,7 +18,7 @@ use Buttonizer\Legacy\Utils\Update;
 use Buttonizer\Utils\PermissionCheck;
 /**
  * Dashboard API
- * 
+ *
  * @endpoint /wp-json/buttonizer/dashboard
  * @methods GET
  */
@@ -77,7 +77,12 @@ class ApiDashboard {
      */
     private function init() {
         // Register general Buttonizer settings
-        register_setting( 'buttonizer', 'buttonizer_settings' );
+        register_setting( 'buttonizer', 'buttonizer_settings', [
+            'type'              => 'array',
+            'sanitize_callback' => function ( $value ) {
+                return ( is_array( $value ) ? $value : [] );
+            },
+        ] );
         // Load general Buttonizer settings
         $this->settings = get_option( 'buttonizer_settings' );
         // Migrate to Buttonizer 2.0
@@ -125,7 +130,12 @@ class ApiDashboard {
     private function checkTimesLoaded( $times = 3 ) {
         // recheck buttonizer settings
         // Register general Buttonizer settings
-        register_setting( 'buttonizer', 'buttonizer_settings' );
+        register_setting( 'buttonizer', 'buttonizer_settings', [
+            'type'              => 'array',
+            'sanitize_callback' => function ( $value ) {
+                return ( is_array( $value ) ? $value : [] );
+            },
+        ] );
         // Load general Buttonizer settings
         $this->settings = get_option( 'buttonizer_settings' );
         // Become a super contributer
@@ -178,7 +188,12 @@ class ApiDashboard {
      */
     private function loadButtonObjects() {
         // Register button settings
-        register_setting( 'buttonizer', 'buttonizer_buttons' );
+        register_setting( 'buttonizer', 'buttonizer_buttons', [
+            'type'              => 'array',
+            'sanitize_callback' => function ( $value ) {
+                return ( is_array( $value ) ? $value : [] );
+            },
+        ] );
         // Load button settings
         $buttons = get_option( 'buttonizer_buttons' );
         return ( is_array( $buttons ) && count( $buttons ) > 0 ? $buttons : [] );

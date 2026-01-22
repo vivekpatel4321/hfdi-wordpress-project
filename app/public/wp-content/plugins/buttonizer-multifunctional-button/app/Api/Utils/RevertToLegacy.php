@@ -78,14 +78,52 @@ class RevertToLegacy
     private static function restore(): void
     {
         // Register special backup settings
-        register_setting('buttonizer', 'buttonizer_buttons');
-        register_setting('buttonizer', 'buttonizer_buttons_published');
-        register_setting('buttonizer', 'buttonizer_has_changes');
-        register_setting('buttonizer', 'buttonizer_rules');
-        register_setting('buttonizer', 'buttonizer_rules_published');
-        register_setting('buttonizer', 'buttonizer_schedules');
-        register_setting('buttonizer', 'buttonizer_schedules_published');
-        register_setting('buttonizer', 'buttonizer_settings');
+        register_setting('buttonizer', 'buttonizer_buttons', [
+            'type' => 'array',
+            'sanitize_callback' => function ($value) {
+                return is_array($value) ? $value : [];
+            }
+        ]);
+        register_setting('buttonizer', 'buttonizer_buttons_published', [
+            'type' => 'array',
+            'sanitize_callback' => function ($value) {
+                return is_array($value) ? $value : [];
+            }
+        ]);
+        register_setting('buttonizer', 'buttonizer_has_changes', [
+            'type' => 'boolean',
+            'sanitize_callback' => 'rest_sanitize_boolean'
+        ]);
+        register_setting('buttonizer', 'buttonizer_rules', [
+            'type' => 'array',
+            'sanitize_callback' => function ($value) {
+                return is_array($value) ? $value : [];
+            }
+        ]);
+        register_setting('buttonizer', 'buttonizer_rules_published', [
+            'type' => 'array',
+            'sanitize_callback' => function ($value) {
+                return is_array($value) ? $value : [];
+            }
+        ]);
+        register_setting('buttonizer', 'buttonizer_schedules', [
+            'type' => 'array',
+            'sanitize_callback' => function ($value) {
+                return is_array($value) ? $value : [];
+            }
+        ]);
+        register_setting('buttonizer', 'buttonizer_schedules_published', [
+            'type' => 'array',
+            'sanitize_callback' => function ($value) {
+                return is_array($value) ? $value : [];
+            }
+        ]);
+        register_setting('buttonizer', 'buttonizer_settings', [
+            'type' => 'array',
+            'sanitize_callback' => function ($value) {
+                return is_array($value) ? $value : [];
+            }
+        ]);
 
         // Save restorable data
         update_option('buttonizer_buttons', get_option('buttonizer_buttons_backup_30'));

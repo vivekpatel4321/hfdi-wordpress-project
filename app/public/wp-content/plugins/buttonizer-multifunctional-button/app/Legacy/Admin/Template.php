@@ -1,11 +1,11 @@
 <?php
-/* 
+/*
  * SOFTWARE LICENSE INFORMATION
- * 
+ *
  * Copyright (c) 2017 Buttonizer, all rights reserved.
- * 
+ *
  * This file is part of Buttonizer
- * 
+ *
  * For detailed information regarding to the licensing of
  * this software, please review the license.txt or visit:
  * https://buttonizer.pro/license/
@@ -59,14 +59,14 @@ $body_classes[] = ' locale-' . sanitize_html_class(strtolower(str_replace('_', '
 				}
 			}
 		};
-		var ajaxurl = '<?php echo admin_url('admin-ajax.php', 'relative'); ?>';
+		var ajaxurl = '<?php echo esc_url(admin_url('admin-ajax.php', 'relative')); ?>';
 	</script>
 </head>
 
-<body class="<?= implode(" ", $body_classes) ?>">
+<body class="<?php echo esc_attr(implode(' ', $body_classes)); ?>">
 
 	<div class="buttonizer-admin-overlay">
-		<p><b><?php echo __('Buttonizer is loading...', 'buttonizer-multifunctional-button') ?></b></p>
+		<p><b><?php echo esc_html__('Buttonizer is loading...', 'buttonizer-multifunctional-button'); ?></b></p>
 
 		<p>
 			<?php
@@ -74,14 +74,14 @@ $body_classes[] = ' locale-' . sanitize_html_class(strtolower(str_replace('_', '
 				// Translators: First link goes to our knowledge base, the second link goes to the admin panel.
 				__('When Buttonizer does not start, <a %1$s>click here</a> to find out what is going wrong or <a %2$s>click here</a> to return to the WordPress admin dashboard.', 'buttonizer-multifunctional-button'),
 				'href="https://community.buttonizer.pro/knowledgebase/28" target="_blank"',
-				'href="' . admin_url() . '"'
+				'href="' . esc_url(admin_url()) . '"'
 			);
 			?>
 		</p>
 
 		<script type="application/javascript">
 			setTimeout(function() {
-				document.querySelector(".buttonizer-admin-overlay").innerHTML += "<div style=\'margin-top: 40px;\'><?php echo __('When you have a slow internet connection or slow webserver, give it a moment...', 'buttonizer-multifunctional-button') ?></div>";
+				document.querySelector(".buttonizer-admin-overlay").innerHTML += "<div style=\'margin-top: 40px;\'><?php echo esc_js(__('When you have a slow internet connection or slow webserver, give it a moment...', 'buttonizer-multifunctional-button')); ?></div>";
 			}, 10000);
 		</script>
 
@@ -90,7 +90,7 @@ $body_classes[] = ' locale-' . sanitize_html_class(strtolower(str_replace('_', '
 		?>
 			<h3 style="color:red;background: rgb(255, 152, 0);padding: 25px;color: white;width: 50%;margin: auto;box-shadow: 0px 2px 10px 1px #d8d8d8;">
 				<b>
-					<?php echo __('Buttonizer dashboard does not work on IE11! Please use any other browsers to customize your buttons. :)', 'buttonizer-multifunctional-button'); ?>
+					<?php echo esc_html__('Buttonizer dashboard does not work on IE11! Please use any other browsers to customize your buttons. :)', 'buttonizer-multifunctional-button'); ?>
 				</b>
 			</h3>
 		<?php
@@ -98,7 +98,7 @@ $body_classes[] = ' locale-' . sanitize_html_class(strtolower(str_replace('_', '
 		?>
 
 		<noscript>
-			<div class="buttonizer-no-script"><?php echo __('Hi there! JavaScript is disabled in your browser. Please consider to enable JavaScript in your browser to use Buttonizer.', 'buttonizer-multifunctional-button') ?></div>
+			<div class="buttonizer-no-script"><?php echo esc_html__('Hi there! JavaScript is disabled in your browser. Please consider to enable JavaScript in your browser to use Buttonizer.', 'buttonizer-multifunctional-button'); ?></div>
 		</noscript>
 	</div>
 

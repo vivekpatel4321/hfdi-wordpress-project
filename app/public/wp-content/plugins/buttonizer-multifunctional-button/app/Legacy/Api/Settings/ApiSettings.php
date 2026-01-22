@@ -1,11 +1,11 @@
 <?php
-/* 
+/*
  * SOFTWARE LICENSE INFORMATION
- * 
+ *
  * Copyright (c) 2017 Buttonizer, all rights reserved.
- * 
+ *
  * This file is part of Buttonizer
- * 
+ *
  * For detailed information regarding to the licensing of
  * this software, please review the license.txt or visit:
  * https://buttonizer.pro/license/
@@ -17,7 +17,7 @@ use Buttonizer\Utils\PermissionCheck;
 
 /**
  * Settings API
- * 
+ *
  * @endpoint /wp-json/buttonizer/settings
  * @methods GET POST
  */
@@ -76,12 +76,20 @@ class ApiSettings
         ];
     }
     /**
-     * Save settings 
+     * Save settings
      */
     public function post($request)
     {
-        register_setting('buttonizer', 'buttonizer_settings');
-        register_setting('buttonizer', 'buttonizer_has_changes');
+        register_setting('buttonizer', 'buttonizer_settings', [
+            'type' => 'array',
+            'sanitize_callback' => function ($value) {
+                return is_array($value) ? $value : [];
+            }
+        ]);
+        register_setting('buttonizer', 'buttonizer_has_changes', [
+            'type' => 'boolean',
+            'sanitize_callback' => 'rest_sanitize_boolean'
+        ]);
 
         update_option('buttonizer_settings', array_merge(get_option('buttonizer_settings'), $request->get_param('data')));
 

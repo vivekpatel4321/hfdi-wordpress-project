@@ -37,7 +37,10 @@ class ApiRequest
         self::$token = $token;
 
         // Save site connection token
-        register_setting('buttonizer', 'buttonizer_site_connection');
+        register_setting('buttonizer', 'buttonizer_site_connection', [
+            'type' => 'string',
+            'sanitize_callback' => 'sanitize_text_field'
+        ]);
         update_option('buttonizer_site_connection', $token);
 
         Settings::setSetting('token_expiration', new \DateTime("+5 month"), true);
@@ -65,7 +68,10 @@ class ApiRequest
                 return false;
             }
 
-            register_setting('buttonizer', 'buttonizer_site_connection');
+            register_setting('buttonizer', 'buttonizer_site_connection', [
+                'type' => 'string',
+                'sanitize_callback' => 'sanitize_text_field'
+            ]);
             update_option('buttonizer_site_connection', $token);
 
             Settings::setSetting('token_expiration', new \DateTime("+1 month"), true);

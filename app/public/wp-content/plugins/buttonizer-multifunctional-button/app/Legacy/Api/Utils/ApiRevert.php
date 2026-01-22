@@ -1,11 +1,11 @@
 <?php
-/* 
+/*
  * SOFTWARE LICENSE INFORMATION
- * 
+ *
  * Copyright (c) 2017 Buttonizer, all rights reserved.
- * 
+ *
  * This file is part of Buttonizer
- * 
+ *
  * For detailed information regarding to the licensing of
  * this software, please review the license.txt or visit:
  * https://buttonizer.pro/license/
@@ -17,7 +17,7 @@ use Buttonizer\Utils\PermissionCheck;
 
 /**
  * Revert API
- * 
+ *
  * @endpoint /wp-json/buttonizer/revert
  * @methods POST
  */
@@ -53,10 +53,28 @@ class ApiRevert
     public function revert()
     {
         // Register settings
-        register_setting('buttonizer', 'buttonizer_buttons');
-        register_setting('buttonizer', 'buttonizer_rules');
-        register_setting('buttonizer', 'buttonizer_schedules');
-        register_setting('buttonizer', 'buttonizer_has_changes');
+        register_setting('buttonizer', 'buttonizer_buttons', [
+            'type' => 'array',
+            'sanitize_callback' => function ($value) {
+                return is_array($value) ? $value : [];
+            }
+        ]);
+        register_setting('buttonizer', 'buttonizer_rules', [
+            'type' => 'array',
+            'sanitize_callback' => function ($value) {
+                return is_array($value) ? $value : [];
+            }
+        ]);
+        register_setting('buttonizer', 'buttonizer_schedules', [
+            'type' => 'array',
+            'sanitize_callback' => function ($value) {
+                return is_array($value) ? $value : [];
+            }
+        ]);
+        register_setting('buttonizer', 'buttonizer_has_changes', [
+            'type' => 'boolean',
+            'sanitize_callback' => 'rest_sanitize_boolean'
+        ]);
 
         // Revert data
         update_option('buttonizer_buttons', get_option('buttonizer_buttons_published'));

@@ -68,21 +68,22 @@ class License {
             // To support the development of this plugin,
             // do NOT remove the code below
             $this->oButtonizer = fs_dynamic_init( [
-                'id'              => '1219',
-                'slug'            => 'buttonizer-multifunctional-button',
-                'type'            => 'plugin',
-                'public_key'      => 'pk_fcd360d9c82b90a5e874e651ad733',
-                'is_premium'      => false,
-                'has_addons'      => false,
-                'has_paid_plans'  => true,
-                'has_affiliation' => 'all',
-                'menu'            => array(
+                'id'               => '1219',
+                'slug'             => 'buttonizer-multifunctional-button',
+                'type'             => 'plugin',
+                'public_key'       => 'pk_fcd360d9c82b90a5e874e651ad733',
+                'is_premium'       => false,
+                'has_addons'       => false,
+                'has_paid_plans'   => true,
+                'has_affiliation'  => 'all',
+                'is_org_compliant' => true,
+                'menu'             => array(
                     'slug'       => 'Buttonizer',
                     'first-path' => 'admin.php?page=Buttonizer#/welcome-splash',
                     'support'    => false,
                     'contact'    => false,
                 ),
-                'is_live'         => true,
+                'is_live'          => true,
             ] );
         }
         return;

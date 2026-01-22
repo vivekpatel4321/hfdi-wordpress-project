@@ -16,7 +16,8 @@ if (houzez_edit_property()) {
 		<?php echo houzez_option('cl_sale_price', 'Sale or Rent Price').houzez_required_field('sale_rent_price'); ?>	
 	</label>
 
-	<input class="form-control" name="prop_price" <?php houzez_required_field_2('sale_rent_price'); ?> id="prop_price" value="<?php echo esc_attr( $property_price ); ?>" placeholder="<?php echo houzez_option('cl_sale_price_plac', 'Enter the price'); ?>" type="text">
+	<!-- Sale Price Input changed to type="number" with step and min attributes -->
+	<input class="form-control" name="prop_price" <?php houzez_required_field_2('sale_rent_price'); ?> id="prop_price" value="<?php echo esc_attr( $property_price ); ?>" placeholder="<?php echo houzez_option('cl_sale_price_plac', 'Enter the price'); ?>" type="number" step="0.01" min="0">
 
     <?php if( isset( $hide_prop_fields['price_placeholder'] ) && $hide_prop_fields['price_placeholder'] != 1 ) { ?>
     <label class="control control--checkbox hz-price-placeholder">

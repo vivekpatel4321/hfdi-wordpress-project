@@ -199,7 +199,7 @@ if(window.buttonizer_consent_given){ enableButtonizer(); }";
         // Make sure the ID exists and is a valid UUID
         if (!isset($atts['id']) || !is_string($atts['id']) || !isValidUUID($atts['id'])) return "";
 
-        return '<div class="buttonizer-inline-widget" data-buttonizer-widget-id="' . $atts['id'] . '"></div>';
+        return '<div class="buttonizer-inline-widget" data-buttonizer-widget-id="' . esc_attr($atts['id']) . '"></div>';
     };
 
     function initFunction()

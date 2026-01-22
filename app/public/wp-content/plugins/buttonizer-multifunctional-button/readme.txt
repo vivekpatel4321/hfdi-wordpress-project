@@ -1,13 +1,13 @@
-﻿=== Smart Floating / Sticky Buttons - Call, Sharing, Chat Widgets & More – Buttonizer ===
+﻿=== Buttonizer - Smart Floating & Sticky Buttons ===
 Contributors: Buttonizer, freemius
 Buy plugin: https://buttonizer.io
 Tags: Conversion, action button, call, marketing, Social Sharing
 Requires at least: 4.7
 Tested up to: 6.9
-Stable tag: 3.4.11
+Stable tag: 3.4.12
 Requires PHP: 7.0
 License: GPLv2 or later
-License URI: http://www.gnu.org/licenses/gpl-2.0.html
+License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
 Button builder. WhatsApp Chat, Facebook Messenger, Telegram, Call, SMS, Email & More. Unlimited Click to Chat, Floating Buttons, Contact Forms, Sticky Menus & floating widgets. With dynamic Page Rules. Use the WhatsApp widget Pop-up to convert your visitors.
 
@@ -15,7 +15,7 @@ Button builder. WhatsApp Chat, Facebook Messenger, Telegram, Call, SMS, Email & 
 
 [Features](https://buttonizer.io/features/) | [Knowledge base](https://r.buttonizer.io/support/knowledgebase) | [Community](https://r.buttonizer.io/support/community)
 
-From WhatsApp Chat, Facebook Messenger, Floating contact form, WhatsApp widgets (New: WhatsApp Business), Click to Chat, Call, Email etc. Buttonizer is the most versatile <strong>Smart Floating Action (Sticky) Button plugin</strong> for WordPress.
+From WhatsApp Chat, Facebook Messenger, Floating contact form, WhatsApp widgets (New: WhatsApp Business), Click to Chat, Call, Email etc. Buttonizer is a versatile <strong>Smart Floating Action (Sticky) Button plugin</strong> for WordPress.
 
 * Choose **from over 40 click actions and chat buttons**
 * Setup within 10 seconds + smart front-end interface (WYSIWYG Editor)
@@ -178,7 +178,7 @@ Choose whenever your buttons are visible. On desktop or mobile devices. On diffe
 
 
 = One more thing. We like to Buzz =
-We are a team of developers dedicated to creating the best Floating Action Button for WordPress. We are adding over 5 new features each month based on the feedback we’re getting from our users.
+We are a team of developers dedicated to creating a great Floating Action Button for WordPress. We are adding over 5 new features each month based on the feedback we’re getting from our users.
 
 Download Buttonizer for free and be part of our growing community!
 
@@ -258,8 +258,21 @@ Yes, you can choose for each button if you want to display the button on mobile,
 = Does Buttonizer support right-to-left languages? =
 Languages can have a different direction of writing and reading? While languages such as English are written and read from left to right, other languages might follow the right-to-left style of script. Just considering the sheer number of language speakers, it is obvious that Buttonizer could not stay behind and has made sure to reserve the layout of the user interface to support right-to-left languages.
 
+== External Services ==
+
+To provide icon libraries and animations, Buttonizer may use the following 3rd party services for performance reasons:
+* **Font Awesome** – Loads CSS and icon fonts based on the version selected by the user to display visual elements on floating buttons. Files are loaded from CDNs such as Font Awesome, Cloudflare, and BootstrapCDN. A separate account is not required to leverage either of these CDNs.
+* **Buttonizer CDN (powered by Cloudflare)** – Loads CSS animations and visual effects for button hover states, entry animations, and interactive effects. A separate account is not required to leverage this CDN.
 
 == Changelog ==
+
+= 3.4.12 =
+Release date: January 12, 2026
+
+**Changelog:**
+- Bugfix
+
+If you experience bugs, problems or you just have some feedback, let us know on our [Buttonizer community](https://community.buttonizer.pro/)!
 
 = 3.4.11 =
 Release date: October 16, 2025

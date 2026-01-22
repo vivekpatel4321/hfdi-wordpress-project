@@ -4,7 +4,7 @@ Tags: broken links, internal link, external link, check links, seo
 Tested up to: 6.9
 Requires at least: 5.7
 Requires PHP: 5.6
-Stable tag: 1.2.7
+Stable tag: 1.2.8
 License: GPLv3 or later
 License URI: https://www.gnu.org/licenses/gpl-3.0.txt
 
@@ -86,6 +86,10 @@ Visit <a href="http://www.wpbeginner.com/" rel="friend" title="WPBeginner">WPBeg
 
 == Changelog ==
 
+**New in Version 1.2.8**
+
+* Updated: Changed wording to reflect that free subscriptions never expire, but that their quota resets each month.
+
 **New in Version 1.2.7**
 
 * New: Users using AIOSEO, Broken Link Checker and Link Assistant now see their broken links count in the AIOSEO Details post column.
@@ -148,6 +152,6 @@ Visit <a href="http://www.wpbeginner.com/" rel="friend" title="WPBeginner">WPBeg
 
 == Upgrade Notice ==
 
-= 1.2.7 =
+= 1.2.8 =
 
 This update adds major improvements and bug fixes.

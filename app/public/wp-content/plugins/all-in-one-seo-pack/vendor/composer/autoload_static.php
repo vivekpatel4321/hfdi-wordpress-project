@@ -4,7 +4,7 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInit1c0f77cca351ddaddb6987d114a4350c
+class ComposerStaticInite1a599465208e02257b695f9063e9b01
 {
     public static $prefixLengthsPsr4 = array (
         'P' => 
@@ -279,8 +279,10 @@ class ComposerStaticInit1c0f77cca351ddaddb6987d114a4350c
         'AIOSEO\\Plugin\\Common\\Standalone\\Notifications' => __DIR__ . '/../..' . '/app/Common/Standalone/Notifications.php',
         'AIOSEO\\Plugin\\Common\\Standalone\\PageBuilders\\Avada' => __DIR__ . '/../..' . '/app/Common/Standalone/PageBuilders/Avada.php',
         'AIOSEO\\Plugin\\Common\\Standalone\\PageBuilders\\Base' => __DIR__ . '/../..' . '/app/Common/Standalone/PageBuilders/Base.php',
+        'AIOSEO\\Plugin\\Common\\Standalone\\PageBuilders\\Bricks' => __DIR__ . '/../..' . '/app/Common/Standalone/PageBuilders/Bricks.php',
         'AIOSEO\\Plugin\\Common\\Standalone\\PageBuilders\\Divi' => __DIR__ . '/../..' . '/app/Common/Standalone/PageBuilders/Divi.php',
         'AIOSEO\\Plugin\\Common\\Standalone\\PageBuilders\\Elementor' => __DIR__ . '/../..' . '/app/Common/Standalone/PageBuilders/Elementor.php',
+        'AIOSEO\\Plugin\\Common\\Standalone\\PageBuilders\\Oxygen' => __DIR__ . '/../..' . '/app/Common/Standalone/PageBuilders/Oxygen.php',
         'AIOSEO\\Plugin\\Common\\Standalone\\PageBuilders\\SeedProd' => __DIR__ . '/../..' . '/app/Common/Standalone/PageBuilders/SeedProd.php',
         'AIOSEO\\Plugin\\Common\\Standalone\\PageBuilders\\SiteOrigin' => __DIR__ . '/../..' . '/app/Common/Standalone/PageBuilders/SiteOrigin.php',
         'AIOSEO\\Plugin\\Common\\Standalone\\PageBuilders\\ThriveArchitect' => __DIR__ . '/../..' . '/app/Common/Standalone/PageBuilders/ThriveArchitect.php',
@@ -501,10 +503,10 @@ class ComposerStaticInit1c0f77cca351ddaddb6987d114a4350c
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->prefixLengthsPsr4 = ComposerStaticInit1c0f77cca351ddaddb6987d114a4350c::$prefixLengthsPsr4;
-            $loader->prefixDirsPsr4 = ComposerStaticInit1c0f77cca351ddaddb6987d114a4350c::$prefixDirsPsr4;
-            $loader->prefixesPsr0 = ComposerStaticInit1c0f77cca351ddaddb6987d114a4350c::$prefixesPsr0;
-            $loader->classMap = ComposerStaticInit1c0f77cca351ddaddb6987d114a4350c::$classMap;
+            $loader->prefixLengthsPsr4 = ComposerStaticInite1a599465208e02257b695f9063e9b01::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInite1a599465208e02257b695f9063e9b01::$prefixDirsPsr4;
+            $loader->prefixesPsr0 = ComposerStaticInite1a599465208e02257b695f9063e9b01::$prefixesPsr0;
+            $loader->classMap = ComposerStaticInite1a599465208e02257b695f9063e9b01::$classMap;
 
         }, null, ClassLoader::class);
     }

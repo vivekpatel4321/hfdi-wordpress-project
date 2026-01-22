@@ -69,9 +69,6 @@ class Cache {
 		if ( ! aioseo()->core->db->tableExists( $this->table ) ) {
 			aioseo()->preUpdates->createCacheTable();
 		}
-
-		// Check if the is_object column exists and add it if it doesn't.
-		aioseo()->preUpdates->addIsObjectColumnToCache();
 	}
 
 	/**

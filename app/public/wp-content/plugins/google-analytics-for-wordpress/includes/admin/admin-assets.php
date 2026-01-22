@@ -28,6 +28,11 @@ class MonsterInsights_Admin_Assets {
 	private static $manifest_data;
 
 	/**
+	 * Directory path of assets.
+	 */
+	private $version_path;
+
+	/**
 	 * Class constructor.
 	 */
 	public function __construct() {
@@ -44,7 +49,11 @@ class MonsterInsights_Admin_Assets {
 
 		add_action( 'admin_enqueue_scripts', array( $this, 'admin_scripts' ) );
 		$this->get_manifest_data();
+
+		// CSS files path.
+		$this->version_path = monsterinsights_is_pro_version() ? 'pro' : 'lite';
 	}
+
 	/**
 	 * Updates the script type for the plugin's handles to type module.
 	 *
@@ -89,6 +98,13 @@ class MonsterInsights_Admin_Assets {
 		// Load Common admin styles.
 		wp_register_style( 'monsterinsights-admin-common-style', plugins_url( 'assets/css/admin-common' . $suffix . '.css', MONSTERINSIGHTS_PLUGIN_FILE ), array(), monsterinsights_get_asset_version() );
 		wp_enqueue_style( 'monsterinsights-admin-common-style' );
+
+		wp_enqueue_style(
+			'monsterinsights-admin-common-build',
+			plugins_url( $this->version_path . '/assets/vue/css/admin.css', MONSTERINSIGHTS_PLUGIN_FILE ),
+			array(),
+			monsterinsights_get_asset_version()
+		);
 
 		// Get current screen.
 		$screen = get_current_screen();

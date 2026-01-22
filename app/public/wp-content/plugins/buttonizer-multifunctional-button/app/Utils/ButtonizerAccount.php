@@ -25,7 +25,12 @@ class ButtonizerAccount
     private static function initialize()
     {
         // Register options
-        register_setting("buttonizer", "buttonizer_account");
+        register_setting("buttonizer", "buttonizer_account", [
+            'type' => 'array',
+            'sanitize_callback' => function ($value) {
+                return is_array($value) ? $value : [];
+            }
+        ]);
 
         // Load settings
         self::$data = get_option("buttonizer_account", []);

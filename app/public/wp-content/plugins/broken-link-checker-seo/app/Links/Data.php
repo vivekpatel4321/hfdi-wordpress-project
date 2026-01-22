@@ -322,6 +322,7 @@ class Data {
 		$postsPerScan        = apply_filters( 'aioseo_blc_links_posts_per_scan', 50 );
 		$postTypes           = aioseoBrokenLinkChecker()->helpers->getScannablePostTypes();
 		$postStatuses        = aioseoBrokenLinkChecker()->helpers->getPublicPostStatuses( true );
+		// phpcs:ignore WordPress.DateTime.RestrictedFunctions.date_date
 		$minimumLinkScanDate = esc_sql( aioseoBrokenLinkChecker()->internalOptions->internal->minimumLinkScanDate ?: date( 'Y-m-d H:i:s' ) );
 
 		$query = aioseoBrokenLinkChecker()->core->db->start( 'posts as p' )

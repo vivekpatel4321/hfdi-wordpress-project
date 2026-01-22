@@ -140,10 +140,7 @@ function monsterinsights_admin_menu()
 	add_submenu_page(
 		$parent_slug,
 		__('Privacy Compliance:', 'google-analytics-for-wordpress'),
-		sprintf(
-			'<span class="monsterinsights-sidebar-label--tight">%s</span>' . $new_indicator,
-			__('Privacy Compliance', 'google-analytics-for-wordpress')
-		),
+		__('Privacy Compliance', 'google-analytics-for-wordpress'),
 		'manage_options',
 		$submenu_base . '#/wpconsent'
 	);
@@ -990,6 +987,13 @@ add_action( 'in_admin_footer', 'monsterinsights_in_admin_footer' );
  * Display notice in admin to install WPConsent.
  */
 function monsterinsights_wpconsent_install_notice() {
+	global $pagenow;
+
+	// Dont show the notice on update page.
+	if ( 'update-core.php' === $pagenow ) {
+		return;
+	}
+
 	// If WPConsent plugin active.
 	if ( function_exists( 'WPConsent' ) ) {
 		return;

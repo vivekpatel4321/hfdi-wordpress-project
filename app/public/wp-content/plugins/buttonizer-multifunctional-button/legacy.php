@@ -60,7 +60,7 @@ if (!defined('BUTTONIZER_DEFINED')) {
             $freemius_link
         ) {
             return sprintf(
-                __('Hey %1$s') . '!<br><br>
+                __('Hey %1$s', 'buttonizer-multifunctional-button') . '!<br><br>
                 <p>Thank you for trying out our plugin!</p><br>
                 <p>Our goal is to provide you excellent support and make the Plugin better and more secure. We do that by tracking how our users are using the plugin, learning why they abandon it, which environments we need to continue supporting, etc. Those valuable data points are key to making data-driven decisions and lead to better UX (user experience), new features, better documentation and other good things.</p><br>
                 <p>Click on Allow and Continue (blue button) so that we can learn how to improve our plugin and help you better when you have support issues.</p><br>

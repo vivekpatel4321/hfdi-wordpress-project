@@ -26,7 +26,12 @@ class Settings
     private static function initialize()
     {
         // Register options
-        register_setting("buttonizer", "buttonizer_settings");
+        register_setting("buttonizer", "buttonizer_settings", [
+            'type' => 'array',
+            'sanitize_callback' => function ($value) {
+                return is_array($value) ? $value : [];
+            }
+        ]);
 
         // Load settings
         self::$settings = get_option("buttonizer_settings", []);

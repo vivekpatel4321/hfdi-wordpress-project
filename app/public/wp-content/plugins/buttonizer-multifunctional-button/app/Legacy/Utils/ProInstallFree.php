@@ -6,7 +6,7 @@ class ProInstallFree
 {
     /**
      * Download plugin/Latest version
-     * 
+     *
      * Since our standalone, we do not need to seperate installs
      * This is why we are downloading/updating our older plugin
      */
@@ -20,7 +20,7 @@ class ProInstallFree
 
         // Cannot update/install
         if (!current_user_can('install_plugins')) {
-            wp_die(__('Sorry, you are not allowed to install plugins on this site. Please ask your administrator to update.'));
+            wp_die(__('Sorry, you are not allowed to install plugins on this site. Please ask your administrator to update.', 'buttonizer-multifunctional-button'));
         }
 
         $upgrader = new \Plugin_Upgrader(new \WP_Ajax_Upgrader_Skin());

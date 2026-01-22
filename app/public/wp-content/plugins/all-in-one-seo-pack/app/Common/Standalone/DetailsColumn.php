@@ -216,6 +216,7 @@ class DetailsColumn {
 		if (
 			function_exists( 'aioseoBrokenLinkChecker' ) &&
 			class_exists( '\AIOSEO\BrokenLinkChecker\Models\LinkStatus' ) &&
+			method_exists( '\AIOSEO\BrokenLinkChecker\Models\LinkStatus', 'getBrokenCountByPostId' ) &&
 			'aioseo-details' === $columnName
 		) {
 			$brokenCount                 = \AIOSEO\BrokenLinkChecker\Models\LinkStatus::getBrokenCountByPostId( $postId );

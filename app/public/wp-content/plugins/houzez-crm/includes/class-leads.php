@@ -274,6 +274,7 @@ if ( ! class_exists( 'Houzez_Leads' ) ) {
 		    global $wpdb;
 		    $table_name = $wpdb->prefix . 'houzez_crm_leads';
 		    $current_user_id = get_current_user_id();
+		    $is_admin_view_all = current_user_can('manage_options') || current_user_can('edit_others_posts');
 
 		    // Fields to include in the CSV
 		    $fields = [
@@ -284,7 +285,11 @@ if ( ! class_exists( 'Houzez_Leads' ) ) {
 		    ];
 
 		    // Create the query string with the specified fields
-		    $query = "SELECT " . implode(', ', $fields) . " FROM {$table_name} WHERE user_id = $current_user_id";
+		    if ( $is_admin_view_all ) {
+		        $query = "SELECT " . implode(', ', $fields) . " FROM {$table_name}";
+		    } else {
+		        $query = "SELECT " . implode(', ', $fields) . " FROM {$table_name} WHERE user_id = $current_user_id";
+		    }
 		    $results = $wpdb->get_results($query, ARRAY_A);
 
 		    // Set the headers to output a CSV
@@ -939,24 +944,40 @@ if ( ! class_exists( 'Houzez_Leads' ) ) {
 		    $page = isset($_GET['cpage']) ? abs((int) $_GET['cpage']) : 1;
 		    $offset = ($page * $items_per_page) - $items_per_page;
 
-		    $current_user_id = get_current_user_id();
+			$current_user_id = get_current_user_id();
 
-		    // Retrieving the search keyword
-		    $keyword = isset($_GET['keyword']) ? sanitize_text_field(trim($_GET['keyword'])) : '';
+			// Retrieving the search keyword
+			$keyword = isset($_GET['keyword']) ? sanitize_text_field(trim($_GET['keyword'])) : '';
 
-		    // Basic query
-		    $query = "SELECT * FROM {$table_name} WHERE user_id = %d";
+			// Allow administrators, editors, and managers (or users with manage_options/edit_others_posts) to see all leads
+			$is_admin_view_all = current_user_can('manage_options') || current_user_can('edit_others_posts');
 
-		    // If keyword is present, modify the query to include search condition
-		    if (!empty($keyword)) {
-		        $query .= $wpdb->prepare(" AND (mobile LIKE '%%%s%%' OR email LIKE '%%%s%%' OR first_name LIKE '%%%s%%' OR last_name LIKE '%%%s%%')", $keyword, $keyword, $keyword, $keyword);
-		    }
+			if ( $is_admin_view_all ) {
+				$query = "SELECT * FROM {$table_name} WHERE 1=1";
 
-		    $total_query = "SELECT COUNT(1) FROM ({$query}) AS combined_table"; // no need for prepare here
-		    $total = $wpdb->get_var($wpdb->prepare($total_query, $current_user_id));
+				if ( !empty($keyword) ) {
+					$query .= $wpdb->prepare(" AND (mobile LIKE '%%%s%%' OR email LIKE '%%%s%%' OR first_name LIKE '%%%s%%' OR last_name LIKE '%%%s%%')", $keyword, $keyword, $keyword, $keyword);
+				}
 
-		    $results_query = $wpdb->prepare($query . ' ORDER BY lead_id DESC LIMIT %d, %d', $current_user_id, $offset, $items_per_page);
-		    $results = $wpdb->get_results($results_query, OBJECT);
+				$total = $wpdb->get_var("SELECT COUNT(1) FROM ({$query}) AS combined_table");
+
+				$results_query = $query . ' ORDER BY lead_id DESC LIMIT %d, %d';
+				$results = $wpdb->get_results( $wpdb->prepare( $results_query, $offset, $items_per_page ), OBJECT );
+
+			} else {
+				// Basic query for normal users (only their leads)
+				$query = "SELECT * FROM {$table_name} WHERE user_id = %d";
+
+				if ( !empty($keyword) ) {
+					$query .= $wpdb->prepare(" AND (mobile LIKE '%%%s%%' OR email LIKE '%%%s%%' OR first_name LIKE '%%%s%%' OR last_name LIKE '%%%s%%')", $keyword, $keyword, $keyword, $keyword);
+				}
+
+				$total_query = "SELECT COUNT(1) FROM ({$query}) AS combined_table"; // no need for prepare here
+				$total = $wpdb->get_var( $wpdb->prepare( $total_query, $current_user_id ) );
+
+				$results_query = $wpdb->prepare( $query . ' ORDER BY lead_id DESC LIMIT %d, %d', $current_user_id, $offset, $items_per_page );
+				$results = $wpdb->get_results( $results_query, OBJECT );
+			}
 
 		    $return_array['data'] = array(
 		        'results' => $results,
@@ -969,20 +990,30 @@ if ( ! class_exists( 'Houzez_Leads' ) ) {
 		}
 
 		public static function get_all_leads() {
-		    global $wpdb;
-		    $table_name = $wpdb->prefix . 'houzez_crm_leads';
-		    $current_user_id = get_current_user_id();
-		    $sql = $wpdb->prepare("SELECT * FROM $table_name WHERE user_id= %d", $current_user_id);
-		    $results = $wpdb->get_results($sql, OBJECT);
-		    return $results;
+			global $wpdb;
+			$table_name = $wpdb->prefix . 'houzez_crm_leads';
+			$current_user_id = get_current_user_id();
+
+			if ( current_user_can('manage_options') || current_user_can('edit_others_posts') ) {
+				$sql = "SELECT * FROM $table_name";
+			} else {
+				$sql = $wpdb->prepare("SELECT * FROM $table_name WHERE user_id= %d", $current_user_id);
+			}
+
+			$results = $wpdb->get_results($sql, OBJECT);
+			return $results;
 		}
 
 		public static function get_lead($lead_id) {
 		    global $wpdb;
 		    $table_name = $wpdb->prefix . 'houzez_crm_leads';
-		    $current_user_id = get_current_user_id();
-		    $sql = $wpdb->prepare("SELECT * FROM $table_name WHERE lead_id = %d AND user_id = %d", $lead_id, $current_user_id);
-		    $result = $wpdb->get_row($sql, OBJECT);
+			$current_user_id = get_current_user_id();
+			if ( current_user_can('manage_options') || current_user_can('edit_others_posts') ) {
+				$sql = $wpdb->prepare("SELECT * FROM $table_name WHERE lead_id = %d", $lead_id);
+			} else {
+				$sql = $wpdb->prepare("SELECT * FROM $table_name WHERE lead_id = %d AND user_id = %d", $lead_id, $current_user_id);
+			}
+			$result = $wpdb->get_row($sql, OBJECT);
 		    if (is_object($result) && !empty($result)) {
 		        return $result;
 		    }
@@ -1102,6 +1133,8 @@ if ( ! class_exists( 'Houzez_Leads' ) ) {
             $table_name = $wpdb->prefix . 'houzez_crm_leads';
 
             $user_id = get_current_user_id();
+            //$is_admin_view_all = current_user_can('manage_options') || current_user_can('edit_others_posts');
+			$is_admin_view_all = current_user_can('manage_options');
 
 			$nonce = $_POST['security'];
 	        if ( ! wp_verify_nonce( $nonce, 'delete_lead_nonce' ) ) {
@@ -1117,24 +1150,26 @@ if ( ! class_exists( 'Houzez_Leads' ) ) {
 	        }
 	        $lead_id = $_POST['lead_id'];
 
-	        $where = array(
-            	'lead_id' => $lead_id
-            );
-
-            $where_format = array(
-            	'%d'
-            );
-
-	        
-	        $deleted = $wpdb->query( 
-				$wpdb->prepare( 
-					"DELETE FROM {$table_name}
-					 WHERE lead_id = %d AND user_id = %d
+	        if ( $is_admin_view_all ) {
+	        	$deleted = $wpdb->query( 
+					$wpdb->prepare( 
+						"DELETE FROM {$table_name}
+						 WHERE lead_id = %d
 					",
-				        $lead_id,
-				        $user_id
-			        )
-			);
+					        $lead_id
+					 )
+				);
+	        } else {
+	        	$deleted = $wpdb->query( 
+					$wpdb->prepare( 
+						"DELETE FROM {$table_name}
+						 WHERE lead_id = %d AND user_id = %d
+					",
+					        $lead_id,
+					        $user_id
+					 )
+				);
+	        }
 
 	        if( $deleted ) {
 		        $ajax_response = array( 'success' => true , 'reason' => '' );
@@ -1149,6 +1184,8 @@ if ( ! class_exists( 'Houzez_Leads' ) ) {
 		    global $wpdb;
 
 		    $user_id = get_current_user_id();
+		    //$is_admin_view_all = current_user_can('manage_options') || current_user_can('edit_others_posts');
+			$is_admin_view_all = current_user_can('manage_options');
 		    $table_name = $wpdb->prefix . 'houzez_crm_leads';
 
 		    if ( !isset( $_POST['ids'] ) ) {
@@ -1165,10 +1202,13 @@ if ( ! class_exists( 'Houzez_Leads' ) ) {
 		    // Create placeholders for each ID
 		    $placeholders = implode(',', array_fill(0, count($ids_array), '%d'));
 
-		    // Merge ids_array with user_id for the preparation
-		    $query_data = array_merge($ids_array, array($user_id));
-
-		    $query = $wpdb->prepare("DELETE FROM {$table_name} WHERE lead_id IN ($placeholders) AND user_id = %d", ...$query_data);
+		    if ( $is_admin_view_all ) {
+		        $query = $wpdb->prepare("DELETE FROM {$table_name} WHERE lead_id IN ($placeholders)", ...$ids_array);
+		    } else {
+		        // Merge ids_array with user_id for the preparation
+		        $query_data = array_merge($ids_array, array($user_id));
+		        $query = $wpdb->prepare("DELETE FROM {$table_name} WHERE lead_id IN ($placeholders) AND user_id = %d", ...$query_data);
+		    }
 		    $deleted = $wpdb->query($query);
 
 		    if( $deleted ) {

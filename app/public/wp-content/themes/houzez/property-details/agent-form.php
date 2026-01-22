@@ -83,25 +83,25 @@ if ($agent_email && $agent_display != 'none') {
 
 				<?php if( $hide_form_fields['name'] != 1 ) { ?>
 				<div class="form-group">
-					<input class="form-control" name="name" value="<?php echo esc_attr($user_name); ?>" type="text" placeholder="<?php echo houzez_option('spl_con_name', 'Name'); ?>">
-				</div><!-- form-group -->
-				<?php } ?>
+				<input class="form-control sidebar-name-field" name="name" value="<?php echo esc_attr($user_name); ?>" type="text" placeholder="<?php echo houzez_option('spl_con_name', 'Name'); ?>" pattern="[A-Za-z\s]+" title="Name must contain only letters and spaces" required>
+			</div><!-- form-group -->
+			<?php } ?>
 
-				<?php if( $hide_form_fields['phone'] != 1 ) { ?>	
-				<div class="form-group">
-					<input class="form-control" name="mobile" value="" type="text" placeholder="<?php echo houzez_option('spl_con_phone', 'Phone'); ?>">
-				</div><!-- form-group -->
-				<?php } ?>
+			<?php if( $hide_form_fields['phone'] != 1 ) { ?>	
+			<div class="form-group">
+				<input class="form-control sidebar-phone-field" name="mobile" value="" type="tel" placeholder="<?php echo houzez_option('spl_con_phone', 'Phone'); ?>" pattern="[0-9]{10}" title="Phone must be numbers only, 10 digits required" maxlength="10" inputmode="numeric" data-validate="phone" required>
+			</div><!-- form-group -->
+			<?php } ?>
 
-				<div class="form-group">
-					<input class="form-control" name="email" value="<?php echo esc_attr($user_email); ?>" type="email" placeholder="<?php echo houzez_option('spl_con_email', 'Email'); ?>">
-				</div><!-- form-group -->
+			<div class="form-group">
+				<input class="form-control" name="email" value="<?php echo esc_attr($user_email); ?>" type="email" placeholder="<?php echo houzez_option('spl_con_email', 'Email'); ?>" required>
+			</div><!-- form-group -->
 
-				<?php if( $hide_form_fields['message'] != 1 ) { ?>	
-				<div class="form-group form-group-textarea">
-					<textarea class="form-control hz-form-message" name="message" rows="4" placeholder="<?php echo houzez_option('spl_con_message', 'Message'); ?>"><?php echo houzez_option('spl_con_interested', "Hello, I am interested in"); ?> [<?php echo get_the_title(); ?>]</textarea>
-				</div><!-- form-group -->	
-				<?php } ?>
+			<?php if( $hide_form_fields['message'] != 1 ) { ?>	
+			<div class="form-group form-group-textarea">
+				<textarea class="form-control hz-form-message" name="message" rows="4" placeholder="<?php echo houzez_option('spl_con_message', 'Message'); ?>"><?php echo houzez_option('spl_con_interested', "Hello, I am interested in"); ?> [<?php echo get_the_title(); ?>]</textarea>
+			</div><!-- form-group -->	
+			<?php } ?>
 
 				<?php if( $hide_form_fields['usertype'] != 1 ) { ?>	
 				<div class="form-group">
@@ -185,4 +185,144 @@ if ($agent_email && $agent_display != 'none') {
 		
 	<?php } ?>
 </div><!-- property-form-wrap -->
+
+<script>
+// Prevent invalid characters from being typed
+document.addEventListener('keypress', function(e) {
+    var isNameField = e.target.name === 'name' || e.target.classList.contains('sidebar-name-field');
+    var isPhoneField = e.target.name === 'mobile' || e.target.classList.contains('sidebar-phone-field');
+    
+    // Name field - only allow letters and spaces
+    if(isNameField) {
+        var char = String.fromCharCode(e.which);
+        if(!/[A-Za-z\s]/.test(char)) {
+            e.preventDefault();
+            showError(e.target, 'Name can only contain letters and spaces');
+            return false;
+        } else {
+            clearError(e.target);
+        }
+    }
+    
+    // Phone field - only allow numbers
+    if(isPhoneField) {
+        var char = String.fromCharCode(e.which);
+        if(!/[0-9]/.test(char)) {
+            e.preventDefault();
+            showError(e.target, 'Phone can only contain numbers');
+            return false;
+        } else {
+            clearError(e.target);
+        }
+    }
+});
+
+// Handle keydown for control keys and 10 digit limit on phone
+document.addEventListener('keydown', function(e) {
+    var isPhoneField = e.target.name === 'mobile' || e.target.classList.contains('sidebar-phone-field');
+    var isNameField = e.target.name === 'name' || e.target.classList.contains('sidebar-name-field');
+    
+    // Allow control keys: backspace, delete, arrow keys, tab
+    var allowedKeys = [8, 9, 37, 38, 39, 40, 46];
+    
+    if(isPhoneField && e.target.value.length >= 10 && allowedKeys.indexOf(e.keyCode) === -1) {
+        e.preventDefault();
+        showError(e.target, 'Phone must be numbers only, 10 digits required');
+        return false;
+    }
+    
+    if(isNameField || isPhoneField) {
+        clearError(e.target);
+    }
+});
+
+// Validate phone field on blur and before form submission
+document.addEventListener('blur', function(e) {
+    var isPhoneField = e.target.name === 'mobile' || e.target.classList.contains('sidebar-phone-field');
+    
+    if(isPhoneField) {
+        var phoneValue = e.target.value.trim();
+        if(phoneValue.length > 0 && phoneValue.length !== 10) {
+            showError(e.target, 'Phone must be numbers only, 10 digits required');
+        } else if(phoneValue.length === 10) {
+            clearError(e.target);
+        }
+    }
+}, true);
+
+// Validate on form submission
+var agentForm = document.querySelector('.property-form form');
+if(agentForm) {
+    agentForm.addEventListener('submit', function(e) {
+        var phoneField = agentForm.querySelector('input[name="mobile"]');
+        if(phoneField) {
+            var phoneValue = phoneField.value.trim();
+            if(phoneValue.length !== 10 || !/^[0-9]{10}$/.test(phoneValue)) {
+                e.preventDefault();
+                showError(phoneField, 'Phone must be numbers only, 10 digits required');
+                return false;
+            }
+        }
+    });
+}
+
+// Paste handling
+document.addEventListener('paste', function(e) {
+    var isNameField = e.target.name === 'name' || e.target.classList.contains('sidebar-name-field');
+    var isPhoneField = e.target.name === 'mobile' || e.target.classList.contains('sidebar-phone-field');
+    
+    if(isNameField || isPhoneField) {
+        e.preventDefault();
+        var pastedText = (e.clipboardData || window.clipboardData).getData('text');
+        
+        if(isNameField) {
+            var filtered = pastedText.replace(/[^A-Za-z\s]/g, '');
+            e.target.value = filtered;
+            if(filtered.length > 0) {
+                clearError(e.target);
+            }
+        } else if(isPhoneField) {
+            var filtered = pastedText.replace(/[^0-9]/g, '').slice(0, 10);
+            e.target.value = filtered;
+            if(filtered.length > 0) {
+                clearError(e.target);
+            }
+        }
+    }
+});
+
+// Helper function to show error message
+function showError(input, message) {
+    var formGroup = input.closest('.form-group');
+    if(!formGroup) return;
+    
+    // Remove existing error message
+    var existingError = formGroup.querySelector('.error-message');
+    if(existingError) {
+        existingError.remove();
+    }
+    
+    // Add error class and message
+    input.classList.add('is-invalid');
+    var errorDiv = document.createElement('div');
+    errorDiv.className = 'error-message';
+    errorDiv.style.color = '#dc3545';
+    errorDiv.style.fontSize = '12px';
+    errorDiv.style.marginTop = '5px';
+    errorDiv.textContent = message;
+    formGroup.appendChild(errorDiv);
+}
+
+// Helper function to clear error message
+function clearError(input) {
+    var formGroup = input.closest('.form-group');
+    if(!formGroup) return;
+    
+    input.classList.remove('is-invalid');
+    var errorDiv = formGroup.querySelector('.error-message');
+    if(errorDiv) {
+        errorDiv.remove();
+    }
+}
+</script>
 <?php } ?>

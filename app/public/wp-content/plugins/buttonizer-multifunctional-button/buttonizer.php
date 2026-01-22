@@ -1,13 +1,13 @@
 <?php
 /*
-* Plugin Name: Buttonizer - Smart Floating Action Button
+* Plugin Name: Buttonizer - Smart Floating & Sticky Buttons
 * Plugin URI:  https://buttonizer.io
 * Description: The Buttonizer is a new way to give a boost to your number of interactions, actions and conversions from your website visitor by adding one or multiple Customizable Smart Floating Button in the corner of your website.
-* Version:     3.4.11
+* Version:     3.4.12
 * Author:      Buttonizer
 * Author URI:  https://buttonizer.io
-* License:     GPLv3
-* License URI: https://buttonizer.io/license/
+* License:     GPLv2 or later
+* License URI: https://www.gnu.org/licenses/gpl-2.0.html
 * Text Domain: buttonizer-multifunctional-button
 * Domain Path: /languages
 *
@@ -24,7 +24,7 @@
 */
 
 // Define current Buttonizer version
-define('BUTTONIZER_VERSION', '3.4.11');
+define('BUTTONIZER_VERSION', '3.4.12');
 define('BUTTONIZER_PLUGIN_FILE', __FILE__);
 
 // Get environment vars

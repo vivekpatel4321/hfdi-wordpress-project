@@ -1,0 +1,42 @@
+# =========================
+# WordPress core
+# =========================
+wp-admin/
+wp-includes/
+
+# =========================
+# Plugins (installed via WP)
+# =========================
+app/public/wp-content/plugins/
+
+# =========================
+# Uploads & generated files
+# =========================
+app/public/wp-content/uploads/
+app/public/wp-content/cache/
+app/public/wp-content/wflogs/
+
+# Elementor / WPForms cache
+app/public/wp-content/uploads/elementor/
+app/public/wp-content/uploads/wpforms/
+
+# =========================
+# Backup & temp files
+# =========================
+*.bak
+*.old
+*.orig
+*.tmp
+
+# =========================
+# Logs
+# =========================
+*.log
+
+# =========================
+# OS / Editor files
+# =========================
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/

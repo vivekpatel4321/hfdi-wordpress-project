@@ -87,7 +87,7 @@ class Ajax {
                 true
             );
             wp_enqueue_script( 'google_analytics' );
-            wp_add_inline_script( 'google_analytics', "\n window.dataLayer = window.dataLayer || [];\n function gtag(){dataLayer.push(arguments);}\n gtag('js', new Date());\n\n gtag('config', '" . $this->settings['google_analytics'] . "');" );
+            wp_add_inline_script( 'google_analytics', "\n window.dataLayer = window.dataLayer || [];\n function gtag(){dataLayer.push(arguments);}\n gtag('js', new Date());\n\n gtag('config', '" . esc_js( $this->settings['google_analytics'] ) . "');" );
         }
     }
 

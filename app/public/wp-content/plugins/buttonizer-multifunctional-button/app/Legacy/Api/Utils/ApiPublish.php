@@ -1,11 +1,11 @@
 <?php
-/* 
+/*
  * SOFTWARE LICENSE INFORMATION
- * 
+ *
  * Copyright (c) 2017 Buttonizer, all rights reserved.
- * 
+ *
  * This file is part of Buttonizer
- * 
+ *
  * For detailed information regarding to the licensing of
  * this software, please review the license.txt or visit:
  * https://buttonizer.pro/license/
@@ -17,7 +17,7 @@ use Buttonizer\Utils\PermissionCheck;
 
 /**
  * Publish API
- * 
+ *
  * @endpoint /wp-json/buttonizer/publish
  * @methods POST
  */
@@ -53,11 +53,34 @@ class ApiPublish
     public function publish()
     {
         // Register settings
-        register_setting('buttonizer', 'buttonizer_buttons_published');
-        register_setting('buttonizer', 'buttonizer_rules_published');
-        register_setting('buttonizer', 'buttonizer_schedules_published');
-        register_setting('buttonizer', 'buttonizer_has_changes');
-        register_setting('buttonizer', 'buttonizer_settings');
+        register_setting('buttonizer', 'buttonizer_buttons_published', [
+            'type' => 'array',
+            'sanitize_callback' => function ($value) {
+                return is_array($value) ? $value : [];
+            }
+        ]);
+        register_setting('buttonizer', 'buttonizer_rules_published', [
+            'type' => 'array',
+            'sanitize_callback' => function ($value) {
+                return is_array($value) ? $value : [];
+            }
+        ]);
+        register_setting('buttonizer', 'buttonizer_schedules_published', [
+            'type' => 'array',
+            'sanitize_callback' => function ($value) {
+                return is_array($value) ? $value : [];
+            }
+        ]);
+        register_setting('buttonizer', 'buttonizer_has_changes', [
+            'type' => 'boolean',
+            'sanitize_callback' => 'rest_sanitize_boolean'
+        ]);
+        register_setting('buttonizer', 'buttonizer_settings', [
+            'type' => 'array',
+            'sanitize_callback' => function ($value) {
+                return is_array($value) ? $value : [];
+            }
+        ]);
 
         // Update cache code
         $settings = get_option('buttonizer_settings');

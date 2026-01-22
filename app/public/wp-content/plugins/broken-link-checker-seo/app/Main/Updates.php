@@ -52,6 +52,7 @@ class Updates {
 		if ( version_compare( $lastActiveVersion, '1.0.0', '<' ) ) {
 			$this->addInitialTables();
 
+			// phpcs:ignore WordPress.DateTime.RestrictedFunctions.date_date	
 			aioseoBrokenLinkChecker()->internalOptions->internal->minimumLinkScanDate = date( 'Y-m-d H:i:s', time() );
 		}
 

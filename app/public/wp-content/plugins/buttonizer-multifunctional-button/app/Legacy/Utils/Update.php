@@ -68,9 +68,9 @@ class Update
 
             header('Content-Type: application/javascript');
 
-            echo json_encode([
+            echo wp_json_encode([
                 "status" => "error",
-                "message" => "Something went wrong while trying to migrate settings from version 1.5 to version 2.0. Please contact Buttonizer Support or go to the <a href=\"https://community.buttonizer.pro/\" target=\"_blank\">Buttonizer Community</a> and let us know the following message: " . $e->getMessage()
+                "message" => "Something went wrong while trying to migrate settings from version 1.5 to version 2.0. Please contact Buttonizer Support or go to the <a href=\"https://community.buttonizer.pro/\" target=\"_blank\">Buttonizer Community</a> and let us know the following message: " . esc_html($e->getMessage())
             ]);
             exit;
         }
@@ -134,22 +134,82 @@ class Update
     private function registerSettings()
     {
         // Backup settings
-        register_setting("buttonizer", "buttonizer_buttons_backup");
-        register_setting("buttonizer", "buttonizer_opening_settings_backup");
-        register_setting("buttonizer", "buttonizer_page_categories_backup");
-        register_setting("buttonizer", "buttonizer_general_settings_backup");
+        register_setting("buttonizer", "buttonizer_buttons_backup", [
+            'type' => 'array',
+            'sanitize_callback' => function ($value) {
+                return is_array($value) ? $value : [];
+            }
+        ]);
+        register_setting("buttonizer", "buttonizer_opening_settings_backup", [
+            'type' => 'array',
+            'sanitize_callback' => function ($value) {
+                return is_array($value) ? $value : [];
+            }
+        ]);
+        register_setting("buttonizer", "buttonizer_page_categories_backup", [
+            'type' => 'array',
+            'sanitize_callback' => function ($value) {
+                return is_array($value) ? $value : [];
+            }
+        ]);
+        register_setting("buttonizer", "buttonizer_general_settings_backup", [
+            'type' => 'array',
+            'sanitize_callback' => function ($value) {
+                return is_array($value) ? $value : [];
+            }
+        ]);
 
         // Get buttons
-        register_setting("buttonizer", "buttonizer_buttons");
-        register_setting("buttonizer", "buttonizer_opening_settings");
-        register_setting("buttonizer", "buttonizer_page_categories");
+        register_setting("buttonizer", "buttonizer_buttons", [
+            'type' => 'array',
+            'sanitize_callback' => function ($value) {
+                return is_array($value) ? $value : [];
+            }
+        ]);
+        register_setting("buttonizer", "buttonizer_opening_settings", [
+            'type' => 'array',
+            'sanitize_callback' => function ($value) {
+                return is_array($value) ? $value : [];
+            }
+        ]);
+        register_setting("buttonizer", "buttonizer_page_categories", [
+            'type' => 'array',
+            'sanitize_callback' => function ($value) {
+                return is_array($value) ? $value : [];
+            }
+        ]);
 
         // Buttonizer 2.0 setting groups
-        register_setting("buttonizer", "buttonizer_buttons");
-        register_setting("buttonizer", "buttonizer_buttons_published");
-        register_setting("buttonizer", "buttonizer_settings");
-        register_setting("buttonizer", "buttonizer_schedules");
-        register_setting("buttonizer", "buttonizer_rules");
+        register_setting("buttonizer", "buttonizer_buttons", [
+            'type' => 'array',
+            'sanitize_callback' => function ($value) {
+                return is_array($value) ? $value : [];
+            }
+        ]);
+        register_setting("buttonizer", "buttonizer_buttons_published", [
+            'type' => 'array',
+            'sanitize_callback' => function ($value) {
+                return is_array($value) ? $value : [];
+            }
+        ]);
+        register_setting("buttonizer", "buttonizer_settings", [
+            'type' => 'array',
+            'sanitize_callback' => function ($value) {
+                return is_array($value) ? $value : [];
+            }
+        ]);
+        register_setting("buttonizer", "buttonizer_schedules", [
+            'type' => 'array',
+            'sanitize_callback' => function ($value) {
+                return is_array($value) ? $value : [];
+            }
+        ]);
+        register_setting("buttonizer", "buttonizer_rules", [
+            'type' => 'array',
+            'sanitize_callback' => function ($value) {
+                return is_array($value) ? $value : [];
+            }
+        ]);
 
         // Load buttons
         $this->backupButtons = get_option('buttonizer_buttons');

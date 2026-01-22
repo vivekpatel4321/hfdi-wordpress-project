@@ -1,12 +1,12 @@
 <?php
 
-/* 
+/*
  * SOFTWARE LICENSE INFORMATION
- * 
+ *
  * Copyright (c) 2017 Buttonizer, all rights reserved.
- * 
+ *
  * This file is part of Buttonizer
- * 
+ *
  * For detailed information regarding to the licensing of
  * this software, please review the license.txt or visit:
  * https://buttonizer.pro/license/
@@ -16,7 +16,7 @@ namespace Buttonizer\Legacy\Api\TimeSchedules;
 use Buttonizer\Utils\PermissionCheck;
 /**
  * PageRules API
- * 
+ *
  * @endpoint /wp-json/buttonizer/time_schedules
  * @methods GET POST
  */
