@@ -40,3 +40,8 @@ app/public/wp-content/uploads/wpforms/
 Thumbs.db
 .idea/
 .vscode/
+
+# Database backups
+*.sql
+*.sql.gz
+*db_backup*
