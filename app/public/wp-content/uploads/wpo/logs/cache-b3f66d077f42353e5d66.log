@@ -538,3 +538,175 @@
 [2026-01-22 04:56:28 : INFO] - Cache for author page URL: https://staging-propertypoint.hfgroup.co.ke/author/mike/ associated with post_type: page and Title: "Properties" has been purged, triggered by action: save_post 
 [2026-01-22 06:48:43 : INFO] - Full Cache Purge triggered by: plugin activation/deactivation 
 [2026-01-22 06:49:20 : INFO] - Full Cache Purge triggered by: plugin activation/deactivation 
+[2026-01-22 11:31:47 : INFO] - Full Cache Purge triggered by action: wp_update_nav_menu 
+[2026-01-22 11:31:47 : INFO] - Full Cache Purge triggered by action: wp_update_nav_menu 
+[2026-01-22 12:12:45 : INFO] - Full Cache Purge triggered by action: wp_update_nav_menu 
+[2026-01-22 12:12:45 : INFO] - Full Cache Purge triggered by action: wp_update_nav_menu 
+[2026-01-23 09:10:59 : INFO] - Cache for URL: https://staging-propertypoint.hfgroup.co.ke/ has been purged, triggered by action: save_post 
+[2026-01-23 09:10:59 : INFO] - Cache for author page URL: https://staging-propertypoint.hfgroup.co.ke/author/mike/ associated with post_type: page and Title: "Home Default" has been purged, triggered by action: save_post 
+[2026-01-23 09:11:00 : INFO] - Cache for URL: https://staging-propertypoint.hfgroup.co.ke/ has been purged, triggered by action: save_post 
+[2026-01-23 09:11:00 : INFO] - Cache for author page URL: https://staging-propertypoint.hfgroup.co.ke/author/mike/ associated with post_type: page and Title: "Home Default" has been purged, triggered by action: save_post 
+[2026-01-23 09:11:00 : INFO] - Cache for URL: https://staging-propertypoint.hfgroup.co.ke/ has been purged, triggered by action: save_post 
+[2026-01-23 09:11:00 : INFO] - Cache for author page URL: https://staging-propertypoint.hfgroup.co.ke/author/mike/ associated with post_type: page and Title: "Home Default" has been purged, triggered by action: save_post 
+[2026-01-23 09:15:06 : INFO] - Cache for URL: https://staging-propertypoint.hfgroup.co.ke/contact/ has been purged, triggered by action: save_post 
+[2026-01-23 09:15:06 : INFO] - Cache for author page URL: https://staging-propertypoint.hfgroup.co.ke/author/mike/ associated with post_type: page and Title: "Contact" has been purged, triggered by action: save_post 
+[2026-01-23 09:15:06 : INFO] - Cache for URL: https://staging-propertypoint.hfgroup.co.ke/contact/ has been purged, triggered by action: save_post 
+[2026-01-23 09:15:06 : INFO] - Cache for author page URL: https://staging-propertypoint.hfgroup.co.ke/author/mike/ associated with post_type: page and Title: "Contact" has been purged, triggered by action: save_post 
+[2026-01-23 09:15:06 : INFO] - Cache for URL: https://staging-propertypoint.hfgroup.co.ke/contact/ has been purged, triggered by action: save_post 
+[2026-01-23 09:15:06 : INFO] - Cache for author page URL: https://staging-propertypoint.hfgroup.co.ke/author/mike/ associated with post_type: page and Title: "Contact" has been purged, triggered by action: save_post 
+[2026-01-23 09:16:52 : INFO] - Cache for URL: https://staging-propertypoint.hfgroup.co.ke/ has been purged, triggered by action: save_post 
+[2026-01-23 09:16:52 : INFO] - Cache for author page URL: https://staging-propertypoint.hfgroup.co.ke/author/mike/ associated with post_type: page and Title: "Home Default" has been purged, triggered by action: save_post 
+[2026-01-23 09:16:53 : INFO] - Cache for URL: https://staging-propertypoint.hfgroup.co.ke/ has been purged, triggered by action: save_post 
+[2026-01-23 09:16:53 : INFO] - Cache for author page URL: https://staging-propertypoint.hfgroup.co.ke/author/mike/ associated with post_type: page and Title: "Home Default" has been purged, triggered by action: save_post 
+[2026-01-23 09:16:53 : INFO] - Cache for URL: https://staging-propertypoint.hfgroup.co.ke/ has been purged, triggered by action: save_post 
+[2026-01-23 09:16:53 : INFO] - Cache for author page URL: https://staging-propertypoint.hfgroup.co.ke/author/mike/ associated with post_type: page and Title: "Home Default" has been purged, triggered by action: save_post 
+[2026-01-27 06:38:43 : INFO] - Full Cache Purge triggered by: plugin activation/deactivation 
+[2026-01-27 06:38:51 : INFO] - Full Cache Purge triggered by: plugin activation/deactivation 
+[2026-01-28 11:17:23 : INFO] - Full Cache Purge triggered by: WP_Optimize_Cache_Commands::purge_page_cache 
+[2026-01-28 11:59:15 : INFO] - Cache for URL: https://staging-propertypoint.hfgroup.co.ke/ has been purged, triggered by action: save_post 
+[2026-01-28 11:59:15 : INFO] - Cache for author page URL: https://staging-propertypoint.hfgroup.co.ke/author/mike/ associated with post_type: page and Title: "Home Default" has been purged, triggered by action: save_post 
+[2026-01-28 11:59:16 : INFO] - Cache for URL: https://staging-propertypoint.hfgroup.co.ke/ has been purged, triggered by action: save_post 
+[2026-01-28 11:59:16 : INFO] - Cache for author page URL: https://staging-propertypoint.hfgroup.co.ke/author/mike/ associated with post_type: page and Title: "Home Default" has been purged, triggered by action: save_post 
+[2026-01-28 11:59:16 : INFO] - Cache for URL: https://staging-propertypoint.hfgroup.co.ke/ has been purged, triggered by action: save_post 
+[2026-01-28 11:59:16 : INFO] - Cache for author page URL: https://staging-propertypoint.hfgroup.co.ke/author/mike/ associated with post_type: page and Title: "Home Default" has been purged, triggered by action: save_post 
+[2026-01-28 12:04:51 : INFO] - Cache for URL: https://staging-propertypoint.hfgroup.co.ke/contact/ has been purged, triggered by action: save_post 
+[2026-01-28 12:04:51 : INFO] - Cache for author page URL: https://staging-propertypoint.hfgroup.co.ke/author/mike/ associated with post_type: page and Title: "Contact" has been purged, triggered by action: save_post 
+[2026-01-28 12:04:51 : INFO] - Cache for URL: https://staging-propertypoint.hfgroup.co.ke/contact/ has been purged, triggered by action: save_post 
+[2026-01-28 12:04:51 : INFO] - Cache for author page URL: https://staging-propertypoint.hfgroup.co.ke/author/mike/ associated with post_type: page and Title: "Contact" has been purged, triggered by action: save_post 
+[2026-01-28 12:04:51 : INFO] - Cache for URL: https://staging-propertypoint.hfgroup.co.ke/contact/ has been purged, triggered by action: save_post 
+[2026-01-28 12:04:51 : INFO] - Cache for author page URL: https://staging-propertypoint.hfgroup.co.ke/author/mike/ associated with post_type: page and Title: "Contact" has been purged, triggered by action: save_post 
+[2026-01-28 12:06:58 : INFO] - Cache for URL: https://staging-propertypoint.hfgroup.co.ke/ has been purged, triggered by action: save_post 
+[2026-01-28 12:06:58 : INFO] - Cache for author page URL: https://staging-propertypoint.hfgroup.co.ke/author/mike/ associated with post_type: page and Title: "Home Default" has been purged, triggered by action: save_post 
+[2026-01-28 12:06:59 : INFO] - Cache for URL: https://staging-propertypoint.hfgroup.co.ke/ has been purged, triggered by action: save_post 
+[2026-01-28 12:06:59 : INFO] - Cache for author page URL: https://staging-propertypoint.hfgroup.co.ke/author/mike/ associated with post_type: page and Title: "Home Default" has been purged, triggered by action: save_post 
+[2026-01-28 12:06:59 : INFO] - Cache for URL: https://staging-propertypoint.hfgroup.co.ke/ has been purged, triggered by action: save_post 
+[2026-01-28 12:06:59 : INFO] - Cache for author page URL: https://staging-propertypoint.hfgroup.co.ke/author/mike/ associated with post_type: page and Title: "Home Default" has been purged, triggered by action: save_post 
+[2026-02-02 08:57:14 : INFO] - Cache for URL: https://staging-propertypoint.hfgroup.co.ke/info-hub/ has been purged, triggered by action: save_post 
+[2026-02-02 08:57:14 : INFO] - Cache for author page URL: https://staging-propertypoint.hfgroup.co.ke/author/mike/ associated with post_type: page and Title: "Info Hub" has been purged, triggered by action: save_post 
+[2026-02-02 09:04:34 : INFO] - Cache for URL: https://staging-propertypoint.hfgroup.co.ke/agent/vivekpatelhf/ has been purged, triggered by action: save_post 
+[2026-02-02 09:04:34 : INFO] - Cache for archive page associated with post_type: houzez_agent and Title: "vivekpatelhf" has been purged, triggered by action: save_post 
+[2026-02-02 09:12:33 : INFO] - Full Cache Purge triggered by: WP_Optimize_Cache_Commands::purge_page_cache 
+[2026-02-02 09:28:02 : INFO] - Cache for URL: https://staging-propertypoint.hfgroup.co.ke/property/villakazi/ has been purged, triggered by action: save_post 
+[2026-02-02 09:28:02 : INFO] - Cache for archive page associated with post_type: property and Title: "VillaKazi Homes" has been purged, triggered by action: save_post 
+[2026-02-02 09:28:02 : INFO] - Cache for author page URL: https://staging-propertypoint.hfgroup.co.ke/author/property-point/ associated with post_type: property and Title: "VillaKazi Homes" has been purged, triggered by action: save_post 
+[2026-02-02 09:28:02 : INFO] - Cache for multiple term taxonomy have been purged due to post terms update, triggered by action: set_object_terms 
+[2026-02-02 09:28:07 : INFO] - Cache for URL: https://staging-propertypoint.hfgroup.co.ke/property/villakazi/ has been purged, triggered by action: save_post 
+[2026-02-02 09:28:07 : INFO] - Cache for archive page associated with post_type: property and Title: "VillaKazi Homes" has been purged, triggered by action: save_post 
+[2026-02-02 09:28:07 : INFO] - Cache for author page URL: https://staging-propertypoint.hfgroup.co.ke/author/property-point/ associated with post_type: property and Title: "VillaKazi Homes" has been purged, triggered by action: save_post 
+[2026-02-02 09:35:43 : INFO] - Full Cache Purge triggered by action: wp_ajax_save-widget 
+[2026-02-02 09:35:54 : INFO] - Full Cache Purge triggered by action: wp_ajax_save-widget 
+[2026-02-02 09:45:55 : INFO] - Cache for URL: https://staging-propertypoint.hfgroup.co.ke/property/prime-property-for-sale-in-riverside-estate-3/ has been purged, triggered by action: save_post 
+[2026-02-02 09:45:55 : INFO] - Cache for archive page associated with post_type: property and Title: "Prime property for sale in Riverside Estate" has been purged, triggered by action: save_post 
+[2026-02-02 09:45:55 : INFO] - Cache for author page URL: https://staging-propertypoint.hfgroup.co.ke/author/hf-auction-properties/ associated with post_type: property and Title: "Prime property for sale in Riverside Estate" has been purged, triggered by action: save_post 
+[2026-02-02 09:45:55 : INFO] - Cache for multiple term taxonomy have been purged due to post terms update, triggered by action: set_object_terms 
+[2026-02-02 09:46:00 : INFO] - Cache for URL: https://staging-propertypoint.hfgroup.co.ke/property/prime-property-for-sale-in-riverside-estate-3/ has been purged, triggered by action: save_post 
+[2026-02-02 09:46:00 : INFO] - Cache for archive page associated with post_type: property and Title: "Prime property for sale in Riverside Estate" has been purged, triggered by action: save_post 
+[2026-02-02 09:46:00 : INFO] - Cache for author page URL: https://staging-propertypoint.hfgroup.co.ke/author/hf-auction-properties/ associated with post_type: property and Title: "Prime property for sale in Riverside Estate" has been purged, triggered by action: save_post 
+[2026-02-02 09:47:55 : INFO] - Cache for URL: https://staging-propertypoint.hfgroup.co.ke/property/prime-property-for-sale-in-riverside-estate-3/ has been purged, triggered by action: save_post 
+[2026-02-02 09:47:55 : INFO] - Cache for archive page associated with post_type: property and Title: "Prime property for sale in Riverside Estate" has been purged, triggered by action: save_post 
+[2026-02-02 09:47:55 : INFO] - Cache for author page URL: https://staging-propertypoint.hfgroup.co.ke/author/hf-auction-properties/ associated with post_type: property and Title: "Prime property for sale in Riverside Estate" has been purged, triggered by action: save_post 
+[2026-02-02 09:47:55 : INFO] - Cache for multiple term taxonomy have been purged due to post terms update, triggered by action: set_object_terms 
+[2026-02-02 09:48:01 : INFO] - Cache for URL: https://staging-propertypoint.hfgroup.co.ke/property/prime-property-for-sale-in-riverside-estate-3/ has been purged, triggered by action: save_post 
+[2026-02-02 09:48:01 : INFO] - Cache for archive page associated with post_type: property and Title: "Prime property for sale in Riverside Estate" has been purged, triggered by action: save_post 
+[2026-02-02 09:48:01 : INFO] - Cache for author page URL: https://staging-propertypoint.hfgroup.co.ke/author/hf-auction-properties/ associated with post_type: property and Title: "Prime property for sale in Riverside Estate" has been purged, triggered by action: save_post 
+[2026-02-02 09:58:40 : INFO] - Full Cache Purge triggered by action: customize_save_after 
+[2026-02-02 10:01:32 : INFO] - Full Cache Purge triggered by action: customize_save_after 
+[2026-02-02 10:01:54 : INFO] - Full Cache Purge triggered by action: customize_save_after 
+[2026-02-02 10:13:52 : INFO] - Cache for URL: https://staging-propertypoint.hfgroup.co.ke/property/prime-property-for-sale-in-dagoretti-riruta/ has been purged, triggered by action: save_post 
+[2026-02-02 10:13:52 : INFO] - Cache for archive page associated with post_type: property and Title: "Prime property for sale in Dagoretti / Riruta" has been purged, triggered by action: save_post 
+[2026-02-02 10:13:52 : INFO] - Cache for author page URL: https://staging-propertypoint.hfgroup.co.ke/author/hf-auction-properties/ associated with post_type: property and Title: "Prime property for sale in Dagoretti / Riruta" has been purged, triggered by action: save_post 
+[2026-02-02 10:13:52 : INFO] - Cache for multiple term taxonomy have been purged due to post terms update, triggered by action: set_object_terms 
+[2026-02-02 10:13:56 : INFO] - Cache for URL: https://staging-propertypoint.hfgroup.co.ke/property/prime-property-for-sale-in-dagoretti-riruta/ has been purged, triggered by action: save_post 
+[2026-02-02 10:13:56 : INFO] - Cache for archive page associated with post_type: property and Title: "Prime property for sale in Dagoretti / Riruta" has been purged, triggered by action: save_post 
+[2026-02-02 10:13:56 : INFO] - Cache for author page URL: https://staging-propertypoint.hfgroup.co.ke/author/hf-auction-properties/ associated with post_type: property and Title: "Prime property for sale in Dagoretti / Riruta" has been purged, triggered by action: save_post 
+[2026-02-02 10:17:22 : INFO] - Cache for URL: https://staging-propertypoint.hfgroup.co.ke/property/prime-property-for-sale-in-riverside-estate-3/ has been purged, triggered by action: save_post 
+[2026-02-02 10:17:22 : INFO] - Cache for archive page associated with post_type: property and Title: "Prime property for sale in Riverside Estate" has been purged, triggered by action: save_post 
+[2026-02-02 10:17:22 : INFO] - Cache for author page URL: https://staging-propertypoint.hfgroup.co.ke/author/hf-auction-properties/ associated with post_type: property and Title: "Prime property for sale in Riverside Estate" has been purged, triggered by action: save_post 
+[2026-02-02 10:17:22 : INFO] - Cache for multiple term taxonomy have been purged due to post terms update, triggered by action: set_object_terms 
+[2026-02-02 10:17:26 : INFO] - Cache for URL: https://staging-propertypoint.hfgroup.co.ke/property/prime-property-for-sale-in-riverside-estate-3/ has been purged, triggered by action: save_post 
+[2026-02-02 10:17:26 : INFO] - Cache for archive page associated with post_type: property and Title: "Prime property for sale in Riverside Estate" has been purged, triggered by action: save_post 
+[2026-02-02 10:17:26 : INFO] - Cache for author page URL: https://staging-propertypoint.hfgroup.co.ke/author/hf-auction-properties/ associated with post_type: property and Title: "Prime property for sale in Riverside Estate" has been purged, triggered by action: save_post 
+[2026-02-02 10:18:07 : INFO] - Cache for URL: https://staging-propertypoint.hfgroup.co.ke/property/prime-property-for-sale-in-riverside-estate-3/ has been purged, triggered by action: save_post 
+[2026-02-02 10:18:07 : INFO] - Cache for archive page associated with post_type: property and Title: "Prime property for sale in Riverside Estate" has been purged, triggered by action: save_post 
+[2026-02-02 10:18:07 : INFO] - Cache for author page URL: https://staging-propertypoint.hfgroup.co.ke/author/hf-auction-properties/ associated with post_type: property and Title: "Prime property for sale in Riverside Estate" has been purged, triggered by action: save_post 
+[2026-02-02 10:18:07 : INFO] - Cache for multiple term taxonomy have been purged due to post terms update, triggered by action: set_object_terms 
+[2026-02-02 10:18:12 : INFO] - Cache for URL: https://staging-propertypoint.hfgroup.co.ke/property/prime-property-for-sale-in-riverside-estate-3/ has been purged, triggered by action: save_post 
+[2026-02-02 10:18:12 : INFO] - Cache for archive page associated with post_type: property and Title: "Prime property for sale in Riverside Estate" has been purged, triggered by action: save_post 
+[2026-02-02 10:18:12 : INFO] - Cache for author page URL: https://staging-propertypoint.hfgroup.co.ke/author/hf-auction-properties/ associated with post_type: property and Title: "Prime property for sale in Riverside Estate" has been purged, triggered by action: save_post 
+[2026-02-02 10:21:01 : INFO] - Full Cache Purge triggered by action: customize_save_after 
+[2026-02-02 12:48:12 : INFO] - Cache for URL: https://staging-propertypoint.hfgroup.co.ke/ has been purged, triggered by action: save_post 
+[2026-02-02 12:48:12 : INFO] - Cache for author page URL: https://staging-propertypoint.hfgroup.co.ke/author/mike/ associated with post_type: page and Title: "Home Default" has been purged, triggered by action: save_post 
+[2026-02-02 12:48:12 : INFO] - Cache for URL: https://staging-propertypoint.hfgroup.co.ke/ has been purged, triggered by action: save_post 
+[2026-02-02 12:48:12 : INFO] - Cache for author page URL: https://staging-propertypoint.hfgroup.co.ke/author/mike/ associated with post_type: page and Title: "Home Default" has been purged, triggered by action: save_post 
+[2026-02-02 12:48:13 : INFO] - Cache for URL: https://staging-propertypoint.hfgroup.co.ke/ has been purged, triggered by action: save_post 
+[2026-02-02 12:48:13 : INFO] - Cache for author page URL: https://staging-propertypoint.hfgroup.co.ke/author/mike/ associated with post_type: page and Title: "Home Default" has been purged, triggered by action: save_post 
+[2026-02-04 07:04:59 : INFO] - Cache for URL: https://staging-propertypoint.hfgroup.co.ke/property/prime-property-for-sale-in-riverside-estate-3/ has been purged, triggered by action: save_post 
+[2026-02-04 07:04:59 : INFO] - Cache for archive page associated with post_type: property and Title: "Prime property for sale in Riverside Estate" has been purged, triggered by action: save_post 
+[2026-02-04 07:04:59 : INFO] - Cache for author page URL: https://staging-propertypoint.hfgroup.co.ke/author/hf-auction-properties/ associated with post_type: property and Title: "Prime property for sale in Riverside Estate" has been purged, triggered by action: save_post 
+[2026-02-04 07:04:59 : INFO] - Cache for multiple term taxonomy have been purged due to post terms update, triggered by action: set_object_terms 
+[2026-02-04 07:05:05 : INFO] - Cache for URL: https://staging-propertypoint.hfgroup.co.ke/property/prime-property-for-sale-in-riverside-estate-3/ has been purged, triggered by action: save_post 
+[2026-02-04 07:05:05 : INFO] - Cache for archive page associated with post_type: property and Title: "Prime property for sale in Riverside Estate" has been purged, triggered by action: save_post 
+[2026-02-04 07:05:05 : INFO] - Cache for author page URL: https://staging-propertypoint.hfgroup.co.ke/author/hf-auction-properties/ associated with post_type: property and Title: "Prime property for sale in Riverside Estate" has been purged, triggered by action: save_post 
+[2026-02-04 07:05:15 : INFO] - Cache for URL: https://staging-propertypoint.hfgroup.co.ke/property/prime-property-for-sale-in-riverside-estate-3/ has been purged, triggered by action: save_post 
+[2026-02-04 07:05:15 : INFO] - Cache for archive page associated with post_type: property and Title: "Prime property for sale in Riverside Estate" has been purged, triggered by action: save_post 
+[2026-02-04 07:05:15 : INFO] - Cache for author page URL: https://staging-propertypoint.hfgroup.co.ke/author/hf-auction-properties/ associated with post_type: property and Title: "Prime property for sale in Riverside Estate" has been purged, triggered by action: save_post 
+[2026-02-04 07:05:15 : INFO] - Cache for multiple term taxonomy have been purged due to post terms update, triggered by action: set_object_terms 
+[2026-02-04 07:05:21 : INFO] - Cache for URL: https://staging-propertypoint.hfgroup.co.ke/property/prime-property-for-sale-in-riverside-estate-3/ has been purged, triggered by action: save_post 
+[2026-02-04 07:05:21 : INFO] - Cache for archive page associated with post_type: property and Title: "Prime property for sale in Riverside Estate" has been purged, triggered by action: save_post 
+[2026-02-04 07:05:21 : INFO] - Cache for author page URL: https://staging-propertypoint.hfgroup.co.ke/author/hf-auction-properties/ associated with post_type: property and Title: "Prime property for sale in Riverside Estate" has been purged, triggered by action: save_post 
+[2026-02-04 07:06:01 : INFO] - Cache for URL: https://staging-propertypoint.hfgroup.co.ke/property/kiambaa-karura-t-625-stephannies-apartments-karura-area/ has been purged, triggered by action: save_post 
+[2026-02-04 07:06:01 : INFO] - Cache for archive page associated with post_type: property and Title: "Kiambaa / Karura / T.625-, Stephannie’s apartments Karura Area" has been purged, triggered by action: save_post 
+[2026-02-04 07:06:01 : INFO] - Cache for author page URL: https://staging-propertypoint.hfgroup.co.ke/author/hf-auction-properties/ associated with post_type: property and Title: "Kiambaa / Karura / T.625-, Stephannie’s apartments Karura Area" has been purged, triggered by action: save_post 
+[2026-02-04 07:06:01 : INFO] - Cache for multiple term taxonomy have been purged due to post terms update, triggered by action: set_object_terms 
+[2026-02-04 07:06:06 : INFO] - Cache for URL: https://staging-propertypoint.hfgroup.co.ke/property/kiambaa-karura-t-625-stephannies-apartments-karura-area/ has been purged, triggered by action: save_post 
+[2026-02-04 07:06:06 : INFO] - Cache for archive page associated with post_type: property and Title: "Kiambaa / Karura / T.625-, Stephannie’s apartments Karura Area" has been purged, triggered by action: save_post 
+[2026-02-04 07:06:06 : INFO] - Cache for author page URL: https://staging-propertypoint.hfgroup.co.ke/author/hf-auction-properties/ associated with post_type: property and Title: "Kiambaa / Karura / T.625-, Stephannie’s apartments Karura Area" has been purged, triggered by action: save_post 
+[2026-02-04 07:28:29 : INFO] - Cache for term page with URL: https://staging-propertypoint.hfgroup.co.ke/country/aita-taveta/  have been purged, triggered by action: edit_terms 
+[2026-02-04 07:48:28 : INFO] - Cache for URL: https://staging-propertypoint.hfgroup.co.ke/property/mangu-gardens/ has been purged, triggered by action: save_post 
+[2026-02-04 07:48:28 : INFO] - Cache for archive page associated with post_type: property and Title: "Mang&#8217;u Gardens" has been purged, triggered by action: save_post 
+[2026-02-04 07:48:28 : INFO] - Cache for author page URL: https://staging-propertypoint.hfgroup.co.ke/author/property-point/ associated with post_type: property and Title: "Mang&#8217;u Gardens" has been purged, triggered by action: save_post 
+[2026-02-04 07:48:28 : INFO] - Cache for multiple term taxonomy have been purged due to post terms update, triggered by action: set_object_terms 
+[2026-02-04 07:48:33 : INFO] - Cache for URL: https://staging-propertypoint.hfgroup.co.ke/property/mangu-gardens/ has been purged, triggered by action: save_post 
+[2026-02-04 07:48:33 : INFO] - Cache for archive page associated with post_type: property and Title: "Mang&#8217;u Gardens" has been purged, triggered by action: save_post 
+[2026-02-04 07:48:33 : INFO] - Cache for author page URL: https://staging-propertypoint.hfgroup.co.ke/author/property-point/ associated with post_type: property and Title: "Mang&#8217;u Gardens" has been purged, triggered by action: save_post 
+[2026-02-04 07:48:51 : INFO] - Cache for URL: https://staging-propertypoint.hfgroup.co.ke/property/marana-suites-apartments-for-sale-in-ruaka-nairobi/ has been purged, triggered by action: save_post 
+[2026-02-04 07:48:51 : INFO] - Cache for archive page associated with post_type: property and Title: "Marana Suites Apartments For Sale In Ruaka, Nairobi" has been purged, triggered by action: save_post 
+[2026-02-04 07:48:51 : INFO] - Cache for author page URL: https://staging-propertypoint.hfgroup.co.ke/author/property-point/ associated with post_type: property and Title: "Marana Suites Apartments For Sale In Ruaka, Nairobi" has been purged, triggered by action: save_post 
+[2026-02-04 07:48:51 : INFO] - Cache for multiple term taxonomy have been purged due to post terms update, triggered by action: set_object_terms 
+[2026-02-04 07:48:55 : INFO] - Cache for URL: https://staging-propertypoint.hfgroup.co.ke/property/marana-suites-apartments-for-sale-in-ruaka-nairobi/ has been purged, triggered by action: save_post 
+[2026-02-04 07:48:55 : INFO] - Cache for archive page associated with post_type: property and Title: "Marana Suites Apartments For Sale In Ruaka, Nairobi" has been purged, triggered by action: save_post 
+[2026-02-04 07:48:55 : INFO] - Cache for author page URL: https://staging-propertypoint.hfgroup.co.ke/author/property-point/ associated with post_type: property and Title: "Marana Suites Apartments For Sale In Ruaka, Nairobi" has been purged, triggered by action: save_post 
+[2026-02-04 07:54:02 : INFO] - Full Cache Purge triggered by action: wp_ajax_save-widget 
+[2026-02-04 07:54:21 : INFO] - Full Cache Purge triggered by action: wp_ajax_save-widget 
+[2026-02-04 07:54:42 : INFO] - Full Cache Purge triggered by action: wp_ajax_save-widget 
+[2026-02-04 07:55:03 : INFO] - Full Cache Purge triggered by action: wp_ajax_save-widget 
+[2026-02-04 07:55:16 : INFO] - Full Cache Purge triggered by action: wp_ajax_save-widget 
+[2026-02-04 07:56:04 : INFO] - Full Cache Purge triggered by action: wp_ajax_save-widget 
+[2026-02-04 07:56:20 : INFO] - Full Cache Purge triggered by action: wp_ajax_save-widget 
+[2026-02-04 07:56:52 : INFO] - Full Cache Purge triggered by action: wp_ajax_save-widget 
+[2026-02-04 08:00:59 : INFO] - Cache for URL: https://staging-propertypoint.hfgroup.co.ke/property/sagana-residences/ has been purged, triggered by action: save_post 
+[2026-02-04 08:00:59 : INFO] - Cache for archive page associated with post_type: property and Title: "Sagana Residences" has been purged, triggered by action: save_post 
+[2026-02-04 08:00:59 : INFO] - Cache for author page URL: https://staging-propertypoint.hfgroup.co.ke/author/property-point/ associated with post_type: property and Title: "Sagana Residences" has been purged, triggered by action: save_post 
+[2026-02-04 08:00:59 : INFO] - Cache for multiple term taxonomy have been purged due to post terms update, triggered by action: set_object_terms 
+[2026-02-04 08:01:04 : INFO] - Cache for URL: https://staging-propertypoint.hfgroup.co.ke/property/sagana-residences/ has been purged, triggered by action: save_post 
+[2026-02-04 08:01:04 : INFO] - Cache for archive page associated with post_type: property and Title: "Sagana Residences" has been purged, triggered by action: save_post 
+[2026-02-04 08:01:04 : INFO] - Cache for author page URL: https://staging-propertypoint.hfgroup.co.ke/author/property-point/ associated with post_type: property and Title: "Sagana Residences" has been purged, triggered by action: save_post 
+[2026-02-04 08:01:22 : INFO] - Cache for URL: https://staging-propertypoint.hfgroup.co.ke/property/limuru-business-park/ has been purged, triggered by action: save_post 
+[2026-02-04 08:01:22 : INFO] - Cache for archive page associated with post_type: property and Title: "Limuru Business Park" has been purged, triggered by action: save_post 
+[2026-02-04 08:01:22 : INFO] - Cache for author page URL: https://staging-propertypoint.hfgroup.co.ke/author/property-point/ associated with post_type: property and Title: "Limuru Business Park" has been purged, triggered by action: save_post 
+[2026-02-04 08:01:22 : INFO] - Cache for multiple term taxonomy have been purged due to post terms update, triggered by action: set_object_terms 
+[2026-02-04 08:01:27 : INFO] - Cache for URL: https://staging-propertypoint.hfgroup.co.ke/property/limuru-business-park/ has been purged, triggered by action: save_post 
+[2026-02-04 08:01:27 : INFO] - Cache for archive page associated with post_type: property and Title: "Limuru Business Park" has been purged, triggered by action: save_post 
+[2026-02-04 08:01:27 : INFO] - Cache for author page URL: https://staging-propertypoint.hfgroup.co.ke/author/property-point/ associated with post_type: property and Title: "Limuru Business Park" has been purged, triggered by action: save_post 
+[2026-02-04 08:53:50 : INFO] - Cache for URL: https://staging-propertypoint.hfgroup.co.ke/property/hf-demo-property/ has been purged, triggered by action: save_post 
+[2026-02-04 08:53:50 : INFO] - Cache for archive page associated with post_type: property and Title: "HF Demo Property" has been purged, triggered by action: save_post 
+[2026-02-04 08:53:50 : INFO] - Cache for author page URL: https://staging-propertypoint.hfgroup.co.ke/author/property-point/ associated with post_type: property and Title: "HF Demo Property" has been purged, triggered by action: save_post 
+[2026-02-04 08:53:54 : INFO] - Cache for URL: https://staging-propertypoint.hfgroup.co.ke/property/hf-demo-property/ has been purged, triggered by action: save_post 
+[2026-02-04 08:53:54 : INFO] - Cache for archive page associated with post_type: property and Title: "HF Demo Property" has been purged, triggered by action: save_post 
+[2026-02-04 08:53:54 : INFO] - Cache for author page URL: https://staging-propertypoint.hfgroup.co.ke/author/property-point/ associated with post_type: property and Title: "HF Demo Property" has been purged, triggered by action: save_post 
+[2026-02-04 09:01:17 : INFO] - Cache for URL: https://staging-propertypoint.hfgroup.co.ke/property/mangu-gardens/ has been purged, triggered by action: save_post 
+[2026-02-04 09:01:17 : INFO] - Cache for archive page associated with post_type: property and Title: "Mang&#8217;u Gardens" has been purged, triggered by action: save_post 
+[2026-02-04 09:01:17 : INFO] - Cache for author page URL: https://staging-propertypoint.hfgroup.co.ke/author/property-point/ associated with post_type: property and Title: "Mang&#8217;u Gardens" has been purged, triggered by action: save_post 
+[2026-02-04 09:01:20 : INFO] - Cache for URL: https://staging-propertypoint.hfgroup.co.ke/property/mangu-gardens/ has been purged, triggered by action: save_post 
+[2026-02-04 09:01:20 : INFO] - Cache for archive page associated with post_type: property and Title: "Mang&#8217;u Gardens" has been purged, triggered by action: save_post 
+[2026-02-04 09:01:20 : INFO] - Cache for author page URL: https://staging-propertypoint.hfgroup.co.ke/author/property-point/ associated with post_type: property and Title: "Mang&#8217;u Gardens" has been purged, triggered by action: save_post 
